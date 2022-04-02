@@ -1,0 +1,23 @@
+---
+title: "ENES 197 Announcement Flyer"
+author: "Brian Danielak"
+date: "4/2/2022"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(dplyr)
+library(ggplot2)
+library(magrittr)
+
+diamonds %>% 
+  ggplot(aes(carat, price, color = clarity)) +
+  geom_point() +
+  facet_wrap(~ cut) +
+  theme_light()
+```
+
