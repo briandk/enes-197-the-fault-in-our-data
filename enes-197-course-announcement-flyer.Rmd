@@ -9,7 +9,7 @@ output: pdf_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-```{r}
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
 library(dplyr)
 library(ggplot2)
 library(magrittr)
@@ -22,7 +22,6 @@ diamonds %>%
   theme_light() + 
   scale_y_continuous(labels = scales::dollar_format()) +
   labs(
-    title = "50,000 Diamonds",
     caption = "Comparing the size, price, and clarity of 50,000 diamonds"
   )
 ```
