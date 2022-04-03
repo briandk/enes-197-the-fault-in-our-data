@@ -1,7 +1,7 @@
 ---
-title: "ENES 197 Announcement Flyer"
-author: "Brian Danielak"
-date: "4/2/2022"
+title: "ENES 197: The Fault in Our Data"
+subtitle: "Summer 2022"
+author: "Dr. Brian Danielak"
 output: pdf_document
 ---
 
