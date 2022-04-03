@@ -17,8 +17,8 @@ library(scales)
 
 diamonds %>%
   ggplot(aes(carat, price, color = clarity)) +
-  geom_point() +
-  facet_wrap( ~ cut) +
+  geom_point(alpha = 0.2) +
+  facet_wrap( ~ cut, scales = "free_x") +
   theme_light() + 
   scale_y_continuous(labels = scales::dollar_format()) +
   labs(
