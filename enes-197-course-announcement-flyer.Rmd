@@ -13,11 +13,17 @@ knitr::opts_chunk$set(echo = TRUE)
 library(dplyr)
 library(ggplot2)
 library(magrittr)
+library(scales)
 
-diamonds %>% 
+diamonds %>%
   ggplot(aes(carat, price, color = clarity)) +
   geom_point() +
-  facet_wrap(~ cut) +
-  theme_light()
+  facet_wrap( ~ cut) +
+  theme_light() + 
+  scale_y_continuous(labels = scales::dollar_format()) +
+  labs(
+    title = "50,000 Diamonds",
+    caption = "Comparing the size, price, and clarity of 50,000 diamonds"
+  )
 ```
 
