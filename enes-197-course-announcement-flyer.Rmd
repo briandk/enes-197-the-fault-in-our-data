@@ -1,12 +1,13 @@
 ---
 title: "ENES 197: The Fault in Our Data"
-subtitle: "Summer 2022"
+subtitle: "A General Education Course in Data Science"
+date: "Summer 2022"
 author: "Dr. Brian Danielak"
 output: pdf_document
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = FALSE)
 ```
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
@@ -22,7 +23,22 @@ diamonds %>%
   theme_light() + 
   scale_y_continuous(labels = scales::dollar_format()) +
   labs(
-    caption = "Comparing the size, price, and clarity of 50,000 diamonds"
+    caption = "Example: Comparing the size, price, and clarity of 50,000 diamonds"
   )
 ```
 
+Introducing **ENES 197**, a course focusing on data science and computational thinking using the Python programming language. ENES 197 counts for both a Distributive Studies (DSSP) **Gen Ed** and an **I-Series** (SCIS) Gen Ed. ***No prior programming experience is necessary***.
+
+## How Can Data Science Help Us?
+
+-   How do we know when an entire city's water supply is poisoned?
+-   How can we understand why only a few people are rich while so many others are in need?
+-   How can we find patterns in 50,000 pieces of data?
+
+## Goals for the Course
+
+-   Introduce students to basic programming concepts including variables, control flow, data structures, functions, and program design
+-   Teach students how to wrangle and tidy the often-messy data we get from real-world sources
+-   Show students a "grammar of graphics" (Wilkinson, 1999) for data visualization
+-   Have students create scriptable data analyses that can be run and verified by others
+-   Use industry-standard data science tools for reproducible mathematical modeling, visualization, and communication (viz. Python, pandas, Numpy, SciPy, and JupyterLab).
