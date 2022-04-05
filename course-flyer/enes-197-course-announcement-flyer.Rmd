@@ -27,7 +27,9 @@ diamonds %>%
   )
 ```
 
-Introducing **ENES 197**, a course focusing on data science and computational thinking using the Python programming language. ENES 197 counts for both a Distributive Studies (DSSP) **Gen Ed** and an **I-Series** (SCIS) Gen Ed. ***No prior programming experience is necessary***.
+# Introducing **ENES 197**
+
+ENES 197 teaches data science and computational thinking using the Python programming language. The course counts for both a Distributive Studies (DSSP) **Gen Ed** rfequirement and an **I-Series** (SCIS) requirement. ***No prior programming experience is necessary***.
 
 ## How Can Data Science Help Us?
 
