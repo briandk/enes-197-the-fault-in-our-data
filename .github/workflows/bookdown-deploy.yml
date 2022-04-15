@@ -21,9 +21,16 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: "Install Dependencies"
-        run: |
-          Rscript -e "devtools::install_github('bookdown')"
+
+      - name: Setup Pandoc
+        uses: r-lib/actions/setup-pandoc@master
+
+      - name: Install Basic Dependencies
+      - uses: r-lib/actions/setup-r-dependencies@v1
+        with:
+          extra-packages: [
+            "devtools"
+          ]
       - name: "Build Book"
         run: |
           Rscript -e "bookdown::render_book()"
