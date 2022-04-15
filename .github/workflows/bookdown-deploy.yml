@@ -28,8 +28,12 @@ jobs:
         with:
           use-public-rspm: true
 
-      - name: Setup R Environment
+      - name: Setup renv
         uses: r-lib/actions/setup-renv@v2
+
+      - name: Install Ubuntu Packages
+        runs: |
+          apt-get install libcurl4-openssl-dev
 
       - name: Install Dependencies
         run: |
