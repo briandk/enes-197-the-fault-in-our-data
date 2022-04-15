@@ -25,11 +25,6 @@ jobs:
         r-version: ['4.1.3']
 
     steps:
-      - name: "Set up TinyTeX"
-      - uses: r-lib/actions/setup-tinytex@v2
-        env:
-          # install full prebuilt version
-          TINYTEX_INSTALLER: TinyTeX
       - name: "Install Dependencies"
         run: |
           Rscript -e "devtools::install_github("bookdown")
