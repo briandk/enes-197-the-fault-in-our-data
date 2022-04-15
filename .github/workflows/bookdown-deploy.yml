@@ -20,14 +20,10 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        r-version: ['4.1.3']
-
     steps:
       - name: "Install Dependencies"
         run: |
-          Rscript -e "devtools::install_github("bookdown")
+          Rscript -e "devtools::install_github('bookdown')"
       - name: "Build Book"
         run: |
           Rscript -e "bookdown::render_book()"
