@@ -33,7 +33,7 @@ jobs:
 
       - name: Install Dependencies
         run: |
-          Rscript _install.dependencies.R
+          Rscript _install_dependencies.R
 
       - name: Cache bookdown results
         uses: actions/cache@v2
