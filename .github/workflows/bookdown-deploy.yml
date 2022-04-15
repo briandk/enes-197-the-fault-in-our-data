@@ -33,7 +33,7 @@ jobs:
 
       - name: Install Ubuntu Packages
         run: |
-          apt-get install libcurl4-openssl-dev
+          /usr/bin/sudo DEBIAN_FRONTEND=noninteractive apt-get install -y libcurl4-openssl-dev
 
       - name: Install Dependencies
         run: |
