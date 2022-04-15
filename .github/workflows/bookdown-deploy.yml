@@ -1,41 +1,45 @@
-# This workflow uses actions that are not certified by GitHub.
-# They are provided by a third-party and are governed by
-# separate terms of service, privacy policy, and support
-# documentation.
-#
-# See https://github.com/r-lib/actions/tree/master/examples#readme for
-# additional example workflows available for the R community.
-
-name: bookdown-deploy
-
 on:
   push:
-    branches: [ master ]
+    branches: [main, master]
   pull_request:
-    branches: [ master ]
+    branches: [main, master]
+  workflow_dispatch:
 
-permissions:
-  contents: read
+name: bookdown
 
 jobs:
-  build:
+  bookdown:
     runs-on: ubuntu-latest
+    # Only restrict concurrency for non-PR jobs
+    concurrency:
+      group: pkgdown-${{ github.event_name != 'pull_request' || github.run_id }}
+    env:
+      GITHUB_PAT: ${{ secrets.GH_PAGES_TOKEN }}
     steps:
+      - uses: actions/checkout@v2
 
-      - name: Setup Pandoc
-        uses: r-lib/actions/setup-pandoc@master
+      - uses: r-lib/actions/setup-pandoc@v2
 
-      - name: Install Basic Dependencies
-      - uses: r-lib/actions/setup-r-dependencies@v1
+      - uses: r-lib/actions/setup-r@v2
         with:
-          extra-packages: [
-            "devtools"
-          ]
-      - name: "Build Book"
-        run: |
-          Rscript -e "bookdown::render_book()"
-      - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@v4.3.0
+          use-public-rspm: true
+
+      - uses: r-lib/actions/setup-renv@v2
+
+      - name: Cache bookdown results
+        uses: actions/cache@v2
         with:
-          branch: gh-pages # The branch the action should deploy to.
-          folder: _book # The folder the action should deploy.
+          path: _bookdown_files
+          key: bookdown-${{ hashFiles('**/*Rmd') }}
+          restore-keys: bookdown-
+
+      - name: Build site
+        run: bookdown::render_book("index.Rmd", quiet = TRUE)
+        shell: Rscript {0}
+
+      - name: Deploy to GitHub pages 🚀
+        if: github.event_name != 'pull_request'
+        uses: JamesIves/github-pages-deploy-action@4.1.4
+        with:
+          branch: gh-pages
+          folder: _book
