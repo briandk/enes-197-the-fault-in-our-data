@@ -1,8 +1,12 @@
-# Hello bookdown 
+# Hello Plot with Python
 
-All chapters start with a first-level heading followed by your chapter title, like the line above. There should be only one first-level heading (`#`) per .Rmd file.
+There's lots of stuff to do in Python; let's start with a plot!
 
-## Python Example
+## Plotting the `diamonds` dataset
+
+Our first plot is going to make use of the `diamonds` dataset that ships with [`plotnine`](https://github.com/has2k1/plotnine).
+
+We'll import the necessary stuff from `plotnine` first. It seems like a lot of imports, but I made them all explicit so you can trace which parts of the code come from the `plotnine` library.
 
 ```{python, echo = TRUE, warning = FALSE, message = FALSE, eval = TRUE, out.width = "100%"}
 from plotnine import aes
@@ -41,7 +45,34 @@ plotnine.options.figure_size = (9, 6.5)
 )
 ```
 
-### An unnumbered section {-}
+## Typesetting Math with $\LaTeX$ for fun and profit
 
-Chapters and sections are numbered by default. To un-number a heading, add a `{.unnumbered}` or the shorter `{-}` at the end of the heading, like in this section.
+We can use $\LaTeX$ to show equations:
 
+$$
+\vec{F}_{net} = m\vec{a}
+$$ 
+
+## We can also run R
+
+Below, we'll generate a similar version of the plot we just made in Python, but we'll make this one in R. We'll need a few different packages to make it work. 
+
+As you look at the code anad the plot, ask yourself where you spot major differences from the Python version.
+
+_Can you spot any differences?_
+
+```{r, echo=TRUE, message=FALSE, warning=FALSE}
+library(dplyr)
+library(ggplot2)
+library(magrittr)
+library(scales)
+
+diamonds %>%
+  ggplot(aes(carat, price, color = clarity, size = depth)) +
+  geom_point(alpha = 0.1) +
+  scale_color_brewer(type = 'qual', palette = 3) +
+  facet_wrap(~ color) +
+  theme_minimal() +
+  scale_y_continuous(labels = scales::dollar_format()) +
+  labs(caption = "Example: Comparing the size, price, and clarity of 50,000 diamonds")
+```
