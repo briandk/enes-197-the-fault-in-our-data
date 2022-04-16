@@ -22,6 +22,8 @@ jobs:
 
       - name: Setup pandoc
         uses: r-lib/actions/setup-pandoc@v2
+        with:
+          pandoc-version: '2.18'
 
       - name: Setup R
         uses: r-lib/actions/setup-r@v2
