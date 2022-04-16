@@ -3,4 +3,5 @@ install.packages(c("bookdown",
                    "bslib",
                    "devtools",
                    "downlit",
+                   "reticulate",
                    "xml2"))
