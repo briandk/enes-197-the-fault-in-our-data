@@ -4,4 +4,8 @@
 .Ruserdata
 enes-197-course-announcement-flyer.pdf
 .DS_Store
+
+# Book intermediate files and output
 _book
+enes-197-textbook.rds
+_bookdown_files
