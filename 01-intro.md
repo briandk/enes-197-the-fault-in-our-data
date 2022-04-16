@@ -1,0 +1,53 @@
+# Hello bookdown 
+
+All chapters start with a first-level heading followed by your chapter title, like the line above. There should be only one first-level heading (`#`) per .Rmd file.
+
+## Python Example
+
+
+```python
+from plotnine import aes
+from plotnine import facet_wrap
+from plotnine import ggtitle
+from plotnine import ggplot
+from plotnine import geom_point
+from plotnine import geom_bar
+from plotnine import scale_color_brewer
+from plotnine import theme_minimal
+from plotnine import xlab
+from plotnine import ylab
+from plotnine.data import diamonds
+import plotnine
+
+plotnine.options.figure_size = (9, 6.5)
+
+(
+  ggplot(
+    diamonds,
+    aes(
+      x = 'carat',
+      y = 'price',
+      color='clarity',
+      size = "depth"
+    )
+  )
+  + geom_point(alpha = 0.1)
+  + scale_color_brewer(type='qual', palette=3)
+  + facet_wrap('~color')
+  + theme_minimal()
+  + xlab("Carat")
+  + ylab("Price ($USD)")
+  + ggtitle('Diamond Prices by Carat')
+
+)
+#> <ggplot: (8744365998602)>
+#> 
+#> /opt/hostedtoolcache/Python/3.9.12/x64/lib/python3.9/site-packages/plotnine/utils.py:371: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
+```
+
+<img src="01-intro_files/figure-html/unnamed-chunk-1-1.png" width="100%" />
+
+### An unnumbered section {-}
+
+Chapters and sections are numbered by default. To un-number a heading, add a `{.unnumbered}` or the shorter `{-}` at the end of the heading, like in this section.
+
