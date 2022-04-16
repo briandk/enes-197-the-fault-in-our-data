@@ -4,7 +4,7 @@ All chapters start with a first-level heading followed by your chapter title, li
 
 ## Python Example
 
-```{python, echo = FALSE, warning = FALSE, message = FALSE, eval = TRUE, out.width = "100%"}
+```{python, echo = TRUE, warning = FALSE, message = FALSE, eval = TRUE, out.width = "100%"}
 from plotnine import aes
 from plotnine import facet_wrap
 from plotnine import ggtitle
