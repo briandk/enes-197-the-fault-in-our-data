@@ -1,16 +1,14 @@
 --- 
-title: "A Minimal Book Example"
-author: "John Doe"
+title: "ENES 197: The Fault in Our Data"
+author: "Brian A. Danielak"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 documentclass: book
-bibliography: [book.bib, packages.bib]
+bibliography: [book.bib]
 # url: your book url like https://bookdown.org/yihui/bookdown
 # cover-image: path to the social sharing image like images/cover.jpg
 description: |
-  This is a minimal example of using the bookdown package to write a book.
-  The HTML output format for this example is bookdown::bs4_book,
-  set in the _output.yml file.
+  The e-textbook for the course ENES 197: The Fault in Our Data at the University of Maryland
 biblio-style: apalike
 csl: chicago-fullnote-bibliography.csl
 ---
@@ -49,12 +47,4 @@ As you work, you may start a local server to live preview this HTML book. This p
 
 ```{r eval=FALSE}
 bookdown::serve_book()
-```
-
-
-```{r include=FALSE}
-# automatically create a bib database for R packages
-knitr::write_bib(c(
-  .packages(), 'bookdown', 'knitr', 'rmarkdown'
-), 'packages.bib')
 ```

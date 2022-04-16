@@ -2,10 +2,46 @@
 
 All chapters start with a first-level heading followed by your chapter title, like the line above. There should be only one first-level heading (`#`) per .Rmd file.
 
-## A section
+## Python Example
 
-All chapter sections start with a second-level (`##`) or higher heading followed by your section title, like the sections above and below here. You can have as many as you want within a chapter.
+```{python, echo = TRUE, warning = FALSE, message = FALSE, eval = TRUE, out.width = "100%"}
+from plotnine import aes
+from plotnine import facet_wrap
+from plotnine import ggtitle
+from plotnine import ggplot
+from plotnine import geom_point
+from plotnine import geom_bar
+from plotnine import scale_color_brewer
+from plotnine import theme_minimal
+from plotnine import xlab
+from plotnine import ylab
+from plotnine.data import diamonds
+import plotnine
+
+plotnine.options.figure_size = (9, 6.5)
+
+(
+  ggplot(
+    diamonds,
+    aes(
+      x = 'carat',
+      y = 'price',
+      color='clarity',
+      size = "depth"
+    )
+  )
+  + geom_point(alpha = 0.1)
+  + scale_color_brewer(type='qual', palette=3)
+  + facet_wrap('~color')
+  + theme_minimal()
+  + xlab("Carat")
+  + ylab("Price ($USD)")
+  + ggtitle('Diamond Prices by Carat')
+
+)
+```
 
 ### An unnumbered section {-}
 
 Chapters and sections are numbered by default. To un-number a heading, add a `{.unnumbered}` or the shorter `{-}` at the end of the heading, like in this section.
+
