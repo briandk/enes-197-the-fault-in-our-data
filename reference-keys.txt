@@ -2,5 +2,7 @@ about
 usage
 render-book
 preview-book
-hello-bookdown
-python-example
+hello-plot-with-python
+plotting-the-diamonds-dataset
+typesetting-math-with-latex-for-fun-and-profit
+we-can-also-run-r
