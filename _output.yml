@@ -2,7 +2,9 @@ bookdown::bs4_book:
   css: style.css
   theme:
     primary: "#096B72"
-  repo: https://github.com/rstudio/bookdown-demo
+  repo:
+    base: https://github.com/briandk/enes-197-the-fault-in-our-data
+    branch: master
 bookdown::pdf_book:
   includes:
     in_header: preamble.tex

@@ -2,5 +2,8 @@
 install.packages(c("bookdown",
                    "bslib",
                    "downlit",
+                   "dplyr",
+                   "magrittr",
                    "reticulate",
+                   "tidyverse",
                    "xml2"))
