@@ -37,12 +37,14 @@ jobs:
         run: |
           /usr/bin/sudo DEBIAN_FRONTEND=noninteractive apt-get install -y libcurl4-openssl-dev
 
-      - name: Install Python Dependencies
+      - name: Setup Python
         uses: actions/setup-python@v3
         with:
           python-version: '3.9'
           cache: 'pip'
-      - run: pip install -r requirements.txt
+
+      - name: Install Python Dependencies
+        run: pip install -r requirements.txt
 
       - name: Install R Dependencies
         run: |
