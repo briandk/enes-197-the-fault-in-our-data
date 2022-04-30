@@ -1,0 +1,34 @@
+# Comparing Tokenization in Pygments and Pandoc
+
+Here's some example Python code:
+
+```{python}
+from plotnine import geom_text
+def myFunction(x: str):
+    pass
+```
+
+And here, to the best of my ability, is how Pygments tokenizes that code vs. how Pandoc does it. Note that Pygments seems to recognize and apply token types that pandoc does not (for example, Pygments recognizes punctuation (p) in the above code where pandoc does not. Note also that pandoc may assign token types for which there is no added style. These two behaviors mean:
+
+-   Unstyled code might still be semantically tokenized, but
+
+-   Untokenized code cannot and will not be styled
+
+| Token        | *Pygments* Token Type | *Pandoc* Token Type |
+|--------------|-----------------------|---------------------|
+| `from`       | kn                    | im                  |
+| `plotnine`   | nn                    | [no token type]     |
+| `import`     | kn                    | im                  |
+| `geom_text`  | n                     | [no token type]     |
+| ---          | ---                   | ---                 |
+| `def`        | k                     | kw                  |
+| `myFunction` | nf                    | [no token type]     |
+| `(`          | p                     | [no token type]     |
+| `x`          | n                     | [no token type]     |
+| `:`          | p                     | [no token type]     |
+| `str`        | nb                    | bu                  |
+| `):`         | p                     | [no token type]     |
+| `pass`       | k                     | cf                  |
+|              |                       |                     |
+
+: Comparing how Python code gets tokenized in Pygments vs. Pandoc
