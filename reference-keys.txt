@@ -6,3 +6,5 @@ hello-plot-with-python
 plotting-the-diamonds-dataset
 typesetting-math-with-latex-for-fun-and-profit
 we-can-also-run-r
+comparing-tokenization-in-pygments-and-pandoc
+how-the-code-gets-tokenized
