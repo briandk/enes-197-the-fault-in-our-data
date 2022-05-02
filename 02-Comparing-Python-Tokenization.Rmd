@@ -38,3 +38,23 @@ And here, to the best of my ability, is how Pygments tokenizes that code vs. how
 [^comparing-python-tokenization-1]: Pygments token types are taken from: <https://github.com/pygments/pygments/blob/ab4afd821aa41403f7a0b1e714112c40b2ad843b/pygments/styles/tango.py#L44-L140>
 
 [^comparing-python-tokenization-2]: Pandoc token types are taken from: <https://github.com/jgm/skylighting/blob/5ccee442dff7eb00423e807f59e24f2a0082bcaa/skylighting-core/src/Skylighting/Styles.hs#L109-L146>
+
+## Seeing what syntax-coloring looks like with a default snippet from Pygments
+
+```{python}
+from typing import Iterator
+
+# This is an example
+class Math:
+    @staticmethod
+    def fib(n: int) -> Iterator[int]:
+        """ Fibonacci series up to n """
+        a, b = 0, 1
+        while a < n:
+            yield a
+            a, b = b, a + b
+
+result = sum(Math.fib(42))
+print("The answer is {}".format(result))
+```
+
