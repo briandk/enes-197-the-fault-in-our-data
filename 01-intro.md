@@ -11,6 +11,7 @@ We'll import the necessary stuff from `plotnine` first. It seems like a lot of i
 
 ```python
 from plotnine import aes
+#> Matplotlib is building the font cache; this may take a moment.
 from plotnine import facet_wrap
 from plotnine import ggtitle
 from plotnine import ggplot
@@ -44,7 +45,7 @@ plotnine.options.figure_size = (9, 6.5)
   + ggtitle('Diamond Prices by Carat')
 
 )
-#> <ggplot: (8777702156644)>
+#> <ggplot: (8777595648100)>
 #> 
 #> /opt/hostedtoolcache/Python/3.9.12/x64/lib/python3.9/site-packages/plotnine/utils.py:371: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
 ```

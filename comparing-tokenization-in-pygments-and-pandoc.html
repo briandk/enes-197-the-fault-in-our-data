@@ -177,6 +177,27 @@
 </tbody>
 </table></div>
 </div>
+<div id="seeing-what-syntax-coloring-looks-like-with-a-default-snippet-from-pygments" class="section level2" number="3.2">
+<h2>
+<span class="header-section-number">3.2</span> Seeing what syntax-coloring looks like with a default snippet from Pygments<a class="anchor" aria-label="anchor" href="#seeing-what-syntax-coloring-looks-like-with-a-default-snippet-from-pygments"><i class="fas fa-link"></i></a>
+</h2>
+<div class="sourceCode" id="cb6"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a href="comparing-tokenization-in-pygments-and-pandoc.html#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> typing <span class="im">import</span> Iterator</span>
+<span id="cb6-2"><a href="comparing-tokenization-in-pygments-and-pandoc.html#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="comparing-tokenization-in-pygments-and-pandoc.html#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="co"># This is an example</span></span>
+<span id="cb6-4"><a href="comparing-tokenization-in-pygments-and-pandoc.html#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Math:</span>
+<span id="cb6-5"><a href="comparing-tokenization-in-pygments-and-pandoc.html#cb6-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">@staticmethod</span></span>
+<span id="cb6-6"><a href="comparing-tokenization-in-pygments-and-pandoc.html#cb6-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> fib(n: <span class="bu">int</span>) <span class="op">-&gt;</span> Iterator[<span class="bu">int</span>]:</span>
+<span id="cb6-7"><a href="comparing-tokenization-in-pygments-and-pandoc.html#cb6-7" aria-hidden="true" tabindex="-1"></a>        <span class="co">""" Fibonacci series up to n """</span></span>
+<span id="cb6-8"><a href="comparing-tokenization-in-pygments-and-pandoc.html#cb6-8" aria-hidden="true" tabindex="-1"></a>        a, b <span class="op">=</span> <span class="dv">0</span>, <span class="dv">1</span></span>
+<span id="cb6-9"><a href="comparing-tokenization-in-pygments-and-pandoc.html#cb6-9" aria-hidden="true" tabindex="-1"></a>        <span class="cf">while</span> a <span class="op">&lt;</span> n:</span>
+<span id="cb6-10"><a href="comparing-tokenization-in-pygments-and-pandoc.html#cb6-10" aria-hidden="true" tabindex="-1"></a>            <span class="cf">yield</span> a</span>
+<span id="cb6-11"><a href="comparing-tokenization-in-pygments-and-pandoc.html#cb6-11" aria-hidden="true" tabindex="-1"></a>            a, b <span class="op">=</span> b, a <span class="op">+</span> b</span>
+<span id="cb6-12"><a href="comparing-tokenization-in-pygments-and-pandoc.html#cb6-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-13"><a href="comparing-tokenization-in-pygments-and-pandoc.html#cb6-13" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> <span class="bu">sum</span>(Math.fib(<span class="dv">42</span>))</span>
+<span id="cb6-14"><a href="comparing-tokenization-in-pygments-and-pandoc.html#cb6-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"The answer is </span><span class="sc">{}</span><span class="st">"</span>.<span class="bu">format</span>(result))</span>
+<span id="cb6-15"><a href="comparing-tokenization-in-pygments-and-pandoc.html#cb6-15" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; The answer is 88</span></span></code></pre></div>
+
+</div>
 </div>
 
 
@@ -194,6 +215,7 @@
       <ul class="nav navbar-nav">
 <li><a class="nav-link" href="#comparing-tokenization-in-pygments-and-pandoc"><span class="header-section-number">3</span> Comparing Tokenization in Pygments and Pandoc</a></li>
 <li><a class="nav-link" href="#how-the-code-gets-tokenized"><span class="header-section-number">3.1</span> How the Code Gets Tokenized</a></li>
+<li><a class="nav-link" href="#seeing-what-syntax-coloring-looks-like-with-a-default-snippet-from-pygments"><span class="header-section-number">3.2</span> Seeing what syntax-coloring looks like with a default snippet from Pygments</a></li>
 </ul>
 
       <div class="book-extra">
@@ -211,7 +233,7 @@
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>ENES 197: The Fault in Our Data</strong>" was written by Brian A. Danielak. It was last built on 2022-05-01.</p>
+    <p>"<strong>ENES 197: The Fault in Our Data</strong>" was written by Brian A. Danielak. It was last built on 2022-05-02.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">
