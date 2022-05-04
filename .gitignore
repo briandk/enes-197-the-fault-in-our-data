@@ -10,3 +10,5 @@ _book
 enes-197-textbook.rds
 _bookdown_files
 *_files
+01-intro.knit.md
+index.md
