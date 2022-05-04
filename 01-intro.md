@@ -11,7 +11,6 @@ We'll import the necessary stuff from `plotnine` first. It seems like a lot of i
 
 ```python
 from plotnine import aes
-#> Matplotlib is building the font cache; this may take a moment.
 from plotnine import facet_wrap
 from plotnine import ggtitle
 from plotnine import ggplot
@@ -45,7 +44,7 @@ plotnine.options.figure_size = (9, 6.5)
   + ggtitle('Diamond Prices by Carat')
 
 )
-#> <ggplot: (8777595648100)>
+#> <ggplot: (8762052579338)>
 #> 
 #> /opt/hostedtoolcache/Python/3.9.12/x64/lib/python3.9/site-packages/plotnine/utils.py:371: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
 ```
@@ -58,15 +57,15 @@ We can use $\LaTeX$ to show equations:
 
 $$
 \vec{F}_{net} = m\vec{a}
-$$ 
+$$
 
 ## We can also run R
 
-Below, we'll generate a similar version of the plot we just made in Python, but we'll make this one in R. We'll need a few different packages to make it work. 
+Below, we'll generate a similar version of the plot we just made in Python, but we'll make this one in R. We'll need a few different packages to make it work.
 
 As you look at the code anad the plot, ask yourself where you spot major differences from the Python version.
 
-_Can you spot any differences?_
+*Can you spot any differences?*
 
 
 ```r

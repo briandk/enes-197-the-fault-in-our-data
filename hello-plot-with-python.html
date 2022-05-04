@@ -65,43 +65,42 @@
 <p>Our first plot is going to make use of the <code>diamonds</code> dataset that ships with <a href="https://github.com/has2k1/plotnine"><code>plotnine</code></a>.</p>
 <p>We’ll import the necessary stuff from <code>plotnine</code> first. It seems like a lot of imports, but I made them all explicit so you can trace which parts of the code come from the <code>plotnine</code> library.</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="hello-plot-with-python.html#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> plotnine <span class="im">import</span> aes</span>
-<span id="cb3-2"><a href="hello-plot-with-python.html#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Matplotlib is building the font cache; this may take a moment.</span></span>
-<span id="cb3-3"><a href="hello-plot-with-python.html#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> plotnine <span class="im">import</span> facet_wrap</span>
-<span id="cb3-4"><a href="hello-plot-with-python.html#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> plotnine <span class="im">import</span> ggtitle</span>
-<span id="cb3-5"><a href="hello-plot-with-python.html#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> plotnine <span class="im">import</span> ggplot</span>
-<span id="cb3-6"><a href="hello-plot-with-python.html#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> plotnine <span class="im">import</span> geom_point</span>
-<span id="cb3-7"><a href="hello-plot-with-python.html#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> plotnine <span class="im">import</span> geom_bar</span>
-<span id="cb3-8"><a href="hello-plot-with-python.html#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> plotnine <span class="im">import</span> scale_color_brewer</span>
-<span id="cb3-9"><a href="hello-plot-with-python.html#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> plotnine <span class="im">import</span> theme_minimal</span>
-<span id="cb3-10"><a href="hello-plot-with-python.html#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> plotnine <span class="im">import</span> xlab</span>
-<span id="cb3-11"><a href="hello-plot-with-python.html#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> plotnine <span class="im">import</span> ylab</span>
-<span id="cb3-12"><a href="hello-plot-with-python.html#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> plotnine.data <span class="im">import</span> diamonds</span>
-<span id="cb3-13"><a href="hello-plot-with-python.html#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> plotnine</span>
-<span id="cb3-14"><a href="hello-plot-with-python.html#cb3-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-15"><a href="hello-plot-with-python.html#cb3-15" aria-hidden="true" tabindex="-1"></a>plotnine.options.figure_size <span class="op">=</span> (<span class="dv">9</span>, <span class="fl">6.5</span>)</span>
-<span id="cb3-16"><a href="hello-plot-with-python.html#cb3-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-17"><a href="hello-plot-with-python.html#cb3-17" aria-hidden="true" tabindex="-1"></a>(</span>
-<span id="cb3-18"><a href="hello-plot-with-python.html#cb3-18" aria-hidden="true" tabindex="-1"></a>  ggplot(</span>
-<span id="cb3-19"><a href="hello-plot-with-python.html#cb3-19" aria-hidden="true" tabindex="-1"></a>    diamonds,</span>
-<span id="cb3-20"><a href="hello-plot-with-python.html#cb3-20" aria-hidden="true" tabindex="-1"></a>    aes(</span>
-<span id="cb3-21"><a href="hello-plot-with-python.html#cb3-21" aria-hidden="true" tabindex="-1"></a>      x <span class="op">=</span> <span class="st">'carat'</span>,</span>
-<span id="cb3-22"><a href="hello-plot-with-python.html#cb3-22" aria-hidden="true" tabindex="-1"></a>      y <span class="op">=</span> <span class="st">'price'</span>,</span>
-<span id="cb3-23"><a href="hello-plot-with-python.html#cb3-23" aria-hidden="true" tabindex="-1"></a>      color<span class="op">=</span><span class="st">'clarity'</span>,</span>
-<span id="cb3-24"><a href="hello-plot-with-python.html#cb3-24" aria-hidden="true" tabindex="-1"></a>      size <span class="op">=</span> <span class="st">"depth"</span></span>
-<span id="cb3-25"><a href="hello-plot-with-python.html#cb3-25" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb3-26"><a href="hello-plot-with-python.html#cb3-26" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb3-27"><a href="hello-plot-with-python.html#cb3-27" aria-hidden="true" tabindex="-1"></a>  <span class="op">+</span> geom_point(alpha <span class="op">=</span> <span class="fl">0.1</span>)</span>
-<span id="cb3-28"><a href="hello-plot-with-python.html#cb3-28" aria-hidden="true" tabindex="-1"></a>  <span class="op">+</span> scale_color_brewer(<span class="bu">type</span><span class="op">=</span><span class="st">'qual'</span>, palette<span class="op">=</span><span class="dv">3</span>)</span>
-<span id="cb3-29"><a href="hello-plot-with-python.html#cb3-29" aria-hidden="true" tabindex="-1"></a>  <span class="op">+</span> facet_wrap(<span class="st">'~color'</span>)</span>
-<span id="cb3-30"><a href="hello-plot-with-python.html#cb3-30" aria-hidden="true" tabindex="-1"></a>  <span class="op">+</span> theme_minimal()</span>
-<span id="cb3-31"><a href="hello-plot-with-python.html#cb3-31" aria-hidden="true" tabindex="-1"></a>  <span class="op">+</span> xlab(<span class="st">"Carat"</span>)</span>
-<span id="cb3-32"><a href="hello-plot-with-python.html#cb3-32" aria-hidden="true" tabindex="-1"></a>  <span class="op">+</span> ylab(<span class="st">"Price ($USD)"</span>)</span>
-<span id="cb3-33"><a href="hello-plot-with-python.html#cb3-33" aria-hidden="true" tabindex="-1"></a>  <span class="op">+</span> ggtitle(<span class="st">'Diamond Prices by Carat'</span>)</span>
-<span id="cb3-34"><a href="hello-plot-with-python.html#cb3-34" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-35"><a href="hello-plot-with-python.html#cb3-35" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb3-36"><a href="hello-plot-with-python.html#cb3-36" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; &lt;ggplot: (8777595648100)&gt;</span></span>
-<span id="cb3-37"><a href="hello-plot-with-python.html#cb3-37" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
-<span id="cb3-38"><a href="hello-plot-with-python.html#cb3-38" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; /opt/hostedtoolcache/Python/3.9.12/x64/lib/python3.9/site-packages/plotnine/utils.py:371: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.</span></span></code></pre></div>
+<span id="cb3-2"><a href="hello-plot-with-python.html#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> plotnine <span class="im">import</span> facet_wrap</span>
+<span id="cb3-3"><a href="hello-plot-with-python.html#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> plotnine <span class="im">import</span> ggtitle</span>
+<span id="cb3-4"><a href="hello-plot-with-python.html#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> plotnine <span class="im">import</span> ggplot</span>
+<span id="cb3-5"><a href="hello-plot-with-python.html#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> plotnine <span class="im">import</span> geom_point</span>
+<span id="cb3-6"><a href="hello-plot-with-python.html#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> plotnine <span class="im">import</span> geom_bar</span>
+<span id="cb3-7"><a href="hello-plot-with-python.html#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> plotnine <span class="im">import</span> scale_color_brewer</span>
+<span id="cb3-8"><a href="hello-plot-with-python.html#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> plotnine <span class="im">import</span> theme_minimal</span>
+<span id="cb3-9"><a href="hello-plot-with-python.html#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> plotnine <span class="im">import</span> xlab</span>
+<span id="cb3-10"><a href="hello-plot-with-python.html#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> plotnine <span class="im">import</span> ylab</span>
+<span id="cb3-11"><a href="hello-plot-with-python.html#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> plotnine.data <span class="im">import</span> diamonds</span>
+<span id="cb3-12"><a href="hello-plot-with-python.html#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> plotnine</span>
+<span id="cb3-13"><a href="hello-plot-with-python.html#cb3-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-14"><a href="hello-plot-with-python.html#cb3-14" aria-hidden="true" tabindex="-1"></a>plotnine.options.figure_size <span class="op">=</span> (<span class="dv">9</span>, <span class="fl">6.5</span>)</span>
+<span id="cb3-15"><a href="hello-plot-with-python.html#cb3-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-16"><a href="hello-plot-with-python.html#cb3-16" aria-hidden="true" tabindex="-1"></a>(</span>
+<span id="cb3-17"><a href="hello-plot-with-python.html#cb3-17" aria-hidden="true" tabindex="-1"></a>  ggplot(</span>
+<span id="cb3-18"><a href="hello-plot-with-python.html#cb3-18" aria-hidden="true" tabindex="-1"></a>    diamonds,</span>
+<span id="cb3-19"><a href="hello-plot-with-python.html#cb3-19" aria-hidden="true" tabindex="-1"></a>    aes(</span>
+<span id="cb3-20"><a href="hello-plot-with-python.html#cb3-20" aria-hidden="true" tabindex="-1"></a>      x <span class="op">=</span> <span class="st">'carat'</span>,</span>
+<span id="cb3-21"><a href="hello-plot-with-python.html#cb3-21" aria-hidden="true" tabindex="-1"></a>      y <span class="op">=</span> <span class="st">'price'</span>,</span>
+<span id="cb3-22"><a href="hello-plot-with-python.html#cb3-22" aria-hidden="true" tabindex="-1"></a>      color<span class="op">=</span><span class="st">'clarity'</span>,</span>
+<span id="cb3-23"><a href="hello-plot-with-python.html#cb3-23" aria-hidden="true" tabindex="-1"></a>      size <span class="op">=</span> <span class="st">"depth"</span></span>
+<span id="cb3-24"><a href="hello-plot-with-python.html#cb3-24" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb3-25"><a href="hello-plot-with-python.html#cb3-25" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb3-26"><a href="hello-plot-with-python.html#cb3-26" aria-hidden="true" tabindex="-1"></a>  <span class="op">+</span> geom_point(alpha <span class="op">=</span> <span class="fl">0.1</span>)</span>
+<span id="cb3-27"><a href="hello-plot-with-python.html#cb3-27" aria-hidden="true" tabindex="-1"></a>  <span class="op">+</span> scale_color_brewer(<span class="bu">type</span><span class="op">=</span><span class="st">'qual'</span>, palette<span class="op">=</span><span class="dv">3</span>)</span>
+<span id="cb3-28"><a href="hello-plot-with-python.html#cb3-28" aria-hidden="true" tabindex="-1"></a>  <span class="op">+</span> facet_wrap(<span class="st">'~color'</span>)</span>
+<span id="cb3-29"><a href="hello-plot-with-python.html#cb3-29" aria-hidden="true" tabindex="-1"></a>  <span class="op">+</span> theme_minimal()</span>
+<span id="cb3-30"><a href="hello-plot-with-python.html#cb3-30" aria-hidden="true" tabindex="-1"></a>  <span class="op">+</span> xlab(<span class="st">"Carat"</span>)</span>
+<span id="cb3-31"><a href="hello-plot-with-python.html#cb3-31" aria-hidden="true" tabindex="-1"></a>  <span class="op">+</span> ylab(<span class="st">"Price ($USD)"</span>)</span>
+<span id="cb3-32"><a href="hello-plot-with-python.html#cb3-32" aria-hidden="true" tabindex="-1"></a>  <span class="op">+</span> ggtitle(<span class="st">'Diamond Prices by Carat'</span>)</span>
+<span id="cb3-33"><a href="hello-plot-with-python.html#cb3-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-34"><a href="hello-plot-with-python.html#cb3-34" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb3-35"><a href="hello-plot-with-python.html#cb3-35" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; &lt;ggplot: (8762052579338)&gt;</span></span>
+<span id="cb3-36"><a href="hello-plot-with-python.html#cb3-36" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
+<span id="cb3-37"><a href="hello-plot-with-python.html#cb3-37" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; /opt/hostedtoolcache/Python/3.9.12/x64/lib/python3.9/site-packages/plotnine/utils.py:371: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.</span></span></code></pre></div>
 <div class="inline-figure"><img src="01-intro_files/figure-html/unnamed-chunk-1-1.png" width="100%"></div>
 </div>
 <div id="typesetting-math-with-latex-for-fun-and-profit" class="section level2" number="2.2">
@@ -165,7 +164,7 @@
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>ENES 197: The Fault in Our Data</strong>" was written by Brian A. Danielak. It was last built on 2022-05-02.</p>
+    <p>"<strong>ENES 197: The Fault in Our Data</strong>" was written by Brian A. Danielak. It was last built on 2022-05-04.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">
