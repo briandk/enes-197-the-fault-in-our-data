@@ -23,7 +23,7 @@ from plotnine import ylab
 from plotnine.data import diamonds
 import plotnine
 
-plotnine.options.figure_size = (9, 6.5)
+plotnine.options.figure_size = (11, 8.5)
 
 (
   ggplot(
@@ -44,7 +44,7 @@ plotnine.options.figure_size = (9, 6.5)
   + ggtitle('Diamond Prices by Carat')
 
 )
-#> <ggplot: (8762052579338)>
+#> <ggplot: (8773775312457)>
 #> 
 #> /opt/hostedtoolcache/Python/3.9.12/x64/lib/python3.9/site-packages/plotnine/utils.py:371: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
 ```
