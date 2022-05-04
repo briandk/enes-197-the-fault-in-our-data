@@ -22,7 +22,7 @@ from plotnine import ylab
 from plotnine.data import diamonds
 import plotnine
 
-plotnine.options.figure_size = (9, 6.5)
+plotnine.options.figure_size = (11, 8.5)
 
 (
   ggplot(
