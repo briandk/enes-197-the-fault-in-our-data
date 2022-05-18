@@ -4,16 +4,16 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Chapter 2 Hello Plot with Python | ENES 197: The Fault in Our Data</title>
+<title>Chapter 3 Hello Plot with Python | ENES 197: The Fault in Our Data</title>
 <meta name="author" content="Brian A. Danielak">
-<meta name="description" content="There’s lots of stuff to do in Python; let’s start with a plot!  2.1 Plotting the diamonds dataset Our first plot is going to make use of the diamonds dataset that ships with plotnine. We’ll...">
+<meta name="description" content="There’s lots of stuff to do in Python; let’s start with a plot!  3.1 Plotting the diamonds dataset Our first plot is going to make use of the diamonds dataset that ships with plotnine. We’ll...">
 <meta name="generator" content="bookdown 0.26 with bs4_book()">
-<meta property="og:title" content="Chapter 2 Hello Plot with Python | ENES 197: The Fault in Our Data">
+<meta property="og:title" content="Chapter 3 Hello Plot with Python | ENES 197: The Fault in Our Data">
 <meta property="og:type" content="book">
-<meta property="og:description" content="There’s lots of stuff to do in Python; let’s start with a plot!  2.1 Plotting the diamonds dataset Our first plot is going to make use of the diamonds dataset that ships with plotnine. We’ll...">
+<meta property="og:description" content="There’s lots of stuff to do in Python; let’s start with a plot!  3.1 Plotting the diamonds dataset Our first plot is going to make use of the diamonds dataset that ships with plotnine. We’ll...">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Chapter 2 Hello Plot with Python | ENES 197: The Fault in Our Data">
-<meta name="twitter:description" content="There’s lots of stuff to do in Python; let’s start with a plot!  2.1 Plotting the diamonds dataset Our first plot is going to make use of the diamonds dataset that ships with plotnine. We’ll...">
+<meta name="twitter:title" content="Chapter 3 Hello Plot with Python | ENES 197: The Fault in Our Data">
+<meta name="twitter:description" content="There’s lots of stuff to do in Python; let’s start with a plot!  3.1 Plotting the diamonds dataset Our first plot is going to make use of the diamonds dataset that ships with plotnine. We’ll...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
 <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.3.1/transition.js"></script><script src="libs/bs3compat-0.3.1/tabs.js"></script><script src="libs/bs3compat-0.3.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
@@ -44,8 +44,9 @@
       <nav aria-label="Table of contents"><h2>Table of contents</h2>
         <ul class="book-toc list-unstyled">
 <li><a class="" href="index.html"><span class="header-section-number">1</span> About</a></li>
-<li><a class="active" href="hello-plot-with-python.html"><span class="header-section-number">2</span> Hello Plot with Python</a></li>
-<li><a class="" href="comparing-tokenization-in-pygments-and-pandoc.html"><span class="header-section-number">3</span> Comparing Tokenization in Pygments and Pandoc</a></li>
+<li><a class="" href="course-learning-objectives.html"><span class="header-section-number">2</span> Course Learning Objectives</a></li>
+<li><a class="active" href="hello-plot-with-python.html"><span class="header-section-number">3</span> Hello Plot with Python</a></li>
+<li><a class="" href="comparing-tokenization-in-pygments-and-pandoc.html"><span class="header-section-number">4</span> Comparing Tokenization in Pygments and Pandoc</a></li>
 </ul>
 
         <div class="book-extra">
@@ -53,14 +54,14 @@
         </div>
       </nav>
 </div>
-  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="hello-plot-with-python" class="section level1" number="2">
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="hello-plot-with-python" class="section level1" number="3">
 <h1>
-<span class="header-section-number">2</span> Hello Plot with Python<a class="anchor" aria-label="anchor" href="#hello-plot-with-python"><i class="fas fa-link"></i></a>
+<span class="header-section-number">3</span> Hello Plot with Python<a class="anchor" aria-label="anchor" href="#hello-plot-with-python"><i class="fas fa-link"></i></a>
 </h1>
 <p>There’s lots of stuff to do in Python; let’s start with a plot!</p>
-<div id="plotting-the-diamonds-dataset" class="section level2" number="2.1">
+<div id="plotting-the-diamonds-dataset" class="section level2" number="3.1">
 <h2>
-<span class="header-section-number">2.1</span> Plotting the <code>diamonds</code> dataset<a class="anchor" aria-label="anchor" href="#plotting-the-diamonds-dataset"><i class="fas fa-link"></i></a>
+<span class="header-section-number">3.1</span> Plotting the <code>diamonds</code> dataset<a class="anchor" aria-label="anchor" href="#plotting-the-diamonds-dataset"><i class="fas fa-link"></i></a>
 </h2>
 <p>Our first plot is going to make use of the <code>diamonds</code> dataset that ships with <a href="https://github.com/has2k1/plotnine"><code>plotnine</code></a>.</p>
 <p>We’ll import the necessary stuff from <code>plotnine</code> first. It seems like a lot of imports, but I made them all explicit so you can trace which parts of the code come from the <code>plotnine</code> library.</p>
@@ -98,23 +99,23 @@
 <span id="cb3-32"><a href="hello-plot-with-python.html#cb3-32" aria-hidden="true" tabindex="-1"></a>  <span class="op">+</span> ggtitle(<span class="st">'Diamond Prices by Carat'</span>)</span>
 <span id="cb3-33"><a href="hello-plot-with-python.html#cb3-33" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-34"><a href="hello-plot-with-python.html#cb3-34" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb3-35"><a href="hello-plot-with-python.html#cb3-35" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; &lt;ggplot: (8773775312457)&gt;</span></span>
+<span id="cb3-35"><a href="hello-plot-with-python.html#cb3-35" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; &lt;ggplot: (8792449158777)&gt;</span></span>
 <span id="cb3-36"><a href="hello-plot-with-python.html#cb3-36" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
 <span id="cb3-37"><a href="hello-plot-with-python.html#cb3-37" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; /opt/hostedtoolcache/Python/3.9.12/x64/lib/python3.9/site-packages/plotnine/utils.py:371: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.</span></span></code></pre></div>
-<div class="inline-figure"><img src="01-intro_files/figure-html/unnamed-chunk-1-1.png" width="100%"></div>
+<div class="inline-figure"><img src="hello-plot-with-python_files/figure-html/unnamed-chunk-1-1.png" width="100%"></div>
 </div>
-<div id="typesetting-math-with-latex-for-fun-and-profit" class="section level2" number="2.2">
+<div id="typesetting-math-with-latex-for-fun-and-profit" class="section level2" number="3.2">
 <h2>
-<span class="header-section-number">2.2</span> Typesetting Math with <span class="math inline">\(\LaTeX\)</span> for fun and profit<a class="anchor" aria-label="anchor" href="#typesetting-math-with-latex-for-fun-and-profit"><i class="fas fa-link"></i></a>
+<span class="header-section-number">3.2</span> Typesetting Math with <span class="math inline">\(\LaTeX\)</span> for fun and profit<a class="anchor" aria-label="anchor" href="#typesetting-math-with-latex-for-fun-and-profit"><i class="fas fa-link"></i></a>
 </h2>
 <p>We can use <span class="math inline">\(\LaTeX\)</span> to show equations:</p>
 <p><span class="math display">\[
 \vec{F}_{net} = m\vec{a}
 \]</span></p>
 </div>
-<div id="we-can-also-run-r" class="section level2" number="2.3">
+<div id="we-can-also-run-r" class="section level2" number="3.3">
 <h2>
-<span class="header-section-number">2.3</span> We can also run R<a class="anchor" aria-label="anchor" href="#we-can-also-run-r"><i class="fas fa-link"></i></a>
+<span class="header-section-number">3.3</span> We can also run R<a class="anchor" aria-label="anchor" href="#we-can-also-run-r"><i class="fas fa-link"></i></a>
 </h2>
 <p>Below, we’ll generate a similar version of the plot we just made in Python, but we’ll make this one in R. We’ll need a few different packages to make it work.</p>
 <p>As you look at the code anad the plot, ask yourself where you spot major differences from the Python version.</p>
@@ -133,26 +134,26 @@
   <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_minimal</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span>
   <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_continuous.html">scale_y_continuous</a></span><span class="op">(</span>labels <span class="op">=</span> <span class="fu">scales</span><span class="fu">::</span><span class="fu"><a href="https://scales.r-lib.org/reference/dollar_format.html">dollar_format</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
   <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>caption <span class="op">=</span> <span class="st">"Example: Comparing the size, price, and clarity of 50,000 diamonds"</span><span class="op">)</span></code></pre></div>
-<div class="inline-figure"><img src="01-intro_files/figure-html/unnamed-chunk-2-3.png" width="672"></div>
+<div class="inline-figure"><img src="hello-plot-with-python_files/figure-html/unnamed-chunk-2-3.png" width="672"></div>
 
 </div>
 </div>
   <div class="chapter-nav">
-<div class="prev"><a href="index.html"><span class="header-section-number">1</span> About</a></div>
-<div class="next"><a href="comparing-tokenization-in-pygments-and-pandoc.html"><span class="header-section-number">3</span> Comparing Tokenization in Pygments and Pandoc</a></div>
+<div class="prev"><a href="course-learning-objectives.html"><span class="header-section-number">2</span> Course Learning Objectives</a></div>
+<div class="next"><a href="comparing-tokenization-in-pygments-and-pandoc.html"><span class="header-section-number">4</span> Comparing Tokenization in Pygments and Pandoc</a></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
       <ul class="nav navbar-nav">
-<li><a class="nav-link" href="#hello-plot-with-python"><span class="header-section-number">2</span> Hello Plot with Python</a></li>
-<li><a class="nav-link" href="#plotting-the-diamonds-dataset"><span class="header-section-number">2.1</span> Plotting the diamonds dataset</a></li>
-<li><a class="nav-link" href="#typesetting-math-with-latex-for-fun-and-profit"><span class="header-section-number">2.2</span> Typesetting Math with \(\LaTeX\) for fun and profit</a></li>
-<li><a class="nav-link" href="#we-can-also-run-r"><span class="header-section-number">2.3</span> We can also run R</a></li>
+<li><a class="nav-link" href="#hello-plot-with-python"><span class="header-section-number">3</span> Hello Plot with Python</a></li>
+<li><a class="nav-link" href="#plotting-the-diamonds-dataset"><span class="header-section-number">3.1</span> Plotting the diamonds dataset</a></li>
+<li><a class="nav-link" href="#typesetting-math-with-latex-for-fun-and-profit"><span class="header-section-number">3.2</span> Typesetting Math with \(\LaTeX\) for fun and profit</a></li>
+<li><a class="nav-link" href="#we-can-also-run-r"><span class="header-section-number">3.3</span> We can also run R</a></li>
 </ul>
 
       <div class="book-extra">
         <ul class="list-unstyled">
-<li><a id="book-source" href="https://github.com/briandk/enes-197-the-fault-in-our-data/blob/master/01-intro.Rmd">View source <i class="fab fa-github"></i></a></li>
-          <li><a id="book-edit" href="https://github.com/briandk/enes-197-the-fault-in-our-data/edit/master/01-intro.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
+<li><a id="book-source" href="https://github.com/briandk/enes-197-the-fault-in-our-data/blob/master/hello-plot-with-python.Rmd">View source <i class="fab fa-github"></i></a></li>
+          <li><a id="book-edit" href="https://github.com/briandk/enes-197-the-fault-in-our-data/edit/master/hello-plot-with-python.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
         </ul>
 </div>
     </nav>
@@ -164,7 +165,7 @@
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>ENES 197: The Fault in Our Data</strong>" was written by Brian A. Danielak. It was last built on 2022-05-04.</p>
+    <p>"<strong>ENES 197: The Fault in Our Data</strong>" was written by Brian A. Danielak. It was last built on 2022-05-18.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

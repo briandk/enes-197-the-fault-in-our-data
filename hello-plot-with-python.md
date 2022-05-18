@@ -44,12 +44,12 @@ plotnine.options.figure_size = (11, 8.5)
   + ggtitle('Diamond Prices by Carat')
 
 )
-#> <ggplot: (8773775312457)>
+#> <ggplot: (8792449158777)>
 #> 
 #> /opt/hostedtoolcache/Python/3.9.12/x64/lib/python3.9/site-packages/plotnine/utils.py:371: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
 ```
 
-<img src="01-intro_files/figure-html/unnamed-chunk-1-1.png" width="100%" />
+<img src="hello-plot-with-python_files/figure-html/unnamed-chunk-1-1.png" width="100%" />
 
 ## Typesetting Math with $\LaTeX$ for fun and profit
 
@@ -84,4 +84,4 @@ diamonds %>%
   labs(caption = "Example: Comparing the size, price, and clarity of 50,000 diamonds")
 ```
 
-<img src="01-intro_files/figure-html/unnamed-chunk-2-3.png" width="672" />
+<img src="hello-plot-with-python_files/figure-html/unnamed-chunk-2-3.png" width="672" />
