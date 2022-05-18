@@ -8,7 +8,7 @@ Our first plot is going to make use of the `diamonds` dataset that ships with [`
 
 We'll import the necessary stuff from `plotnine` first. It seems like a lot of imports, but I made them all explicit so you can trace which parts of the code come from the `plotnine` library.
 
-```{python, echo = TRUE, warning = FALSE, message = FALSE, eval = TRUE, out.width = "100%"}
+```{python, cache = TRUE, echo = TRUE, warning = FALSE, message = FALSE, eval = TRUE, out.width = "100%"}
 from plotnine import aes
 from plotnine import facet_wrap
 from plotnine import ggtitle
@@ -61,7 +61,7 @@ As you look at the code anad the plot, ask yourself where you spot major differe
 
 *Can you spot any differences?*
 
-```{r, echo=TRUE, message=FALSE, warning=FALSE}
+```{r, cache=TRUE, echo=TRUE, message=FALSE, warning=FALSE}
 library(dplyr)
 library(ggplot2)
 library(magrittr)

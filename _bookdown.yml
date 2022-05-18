@@ -5,3 +5,10 @@ delete_merged_file: true
 language:
   ui:
     chapter_name: "Chapter "
+rmd_files: [
+  "index.Rmd",
+  "course-learning-objectives.Rmd",
+
+  "hello-plot-with-python.Rmd",
+  "comparing-python-tokenization.Rmd"
+]
