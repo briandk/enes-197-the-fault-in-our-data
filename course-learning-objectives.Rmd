@@ -17,7 +17,7 @@
 - **qualitatively describe entity relationships in the model.** (E.g., the traffic jam may propagate backwards through traffic, because each car won’t decelerate until it’s within x of the rear bumper of the car in front. Or: roughly speaking, a wolf will seek a rabbit if it finds one, and a rabbit will evade a wolf if it detects one.)
 - **predict or hypothesize how the model may behave** (E.g., If we give cars on the highway high initial speeds and a very low braking distance threshold (how far from the next car they’ll be before they start decelerating), there will be guaranteed crashes. Or: If rabbits are fast and can hear wolves coming from far away, the wolves won’t be successful predators. But, if we can somehow get the wolves to hunt as a pack and surround a rabbit, they should be better able to catch rabbits.) One way we might start to assess this is “if you wanted to tweak the simulation to make the wolves better hunters without changing the rabbit behavior, what might you do?” Or “suppose the wolf population could adapt and become more efficient at hunting rabbits. Give an example of a new behavior you might give them to hunt more efficiently and show in pseudocode how you might roughly encode the behavior into the model.)
 
-## 2 - Formalizing the model
+## Formalizing the model
 
 - What are different ways we might encode/represent a model? (difference equations? Python Code? stock/flow/converter diagrams? other diagrams?)
 - For many of the models we’ll build, we’ll need to be able to express behaviors, do some calculations, and store/move/manipulate some data. In service of those aims, in Python, how can we
@@ -46,7 +46,7 @@
     - Agent-based Modeling, where we’re trying to produce simple rule-based behavior to govern individual parts of the system. Rather than thinking of these as system-wide updates based on parameters, we can think of this as individual agents *reacting* to their own state and what’s around them.
     - Markov Chain Monte-Carlo
 
-### 2.1 When it comes to formalizing models, students will be able to
+### When it comes to formalizing models, students will be able to
 
 #### In Scratch:
 
@@ -102,7 +102,7 @@
     - Agent-based Modeling, where we’re trying to produce simple rule-based behavior to govern individual parts of the system. Rather than thinking of these as system-wide updates based on parameters, we can think of this as individual agents *reacting* to their own state and what’s around them.
     - Markov Chain Monte-Carlo
 
-## 3 - Interrogating the model
+## Interrogating the model
 
 ### How we think about interrogating the model
 
@@ -125,7 +125,7 @@
 - In retrospect, does what comes out of the model echo how the real system behaves/should behave?
 - What statements can I make (in plain writing, say English) about the performance of my model?
 
-### 3.1 Learning Objectives: For a given model, students will be able to
+### Learning Objectives: For a given model, students will be able to
 
 - **Enumerate** some techniques (visual, numerical, or other) for interrogating a model. Examples would include calculating a measure of central tendency, plotting actual data vs. model fit, creating distribution diagrams/histograms/kernel density estimates.
 - **implement** at least two different interrogation techniques:
@@ -134,7 +134,7 @@
 - **Create a plot** to assess model fit
 - **Judge and justify** the appropriateness of a model using diagnostic plots (and justify their reasoning)
 
-## 4 - Refining the model
+## Refining the model
 
 - How do I achieve a better fit?
     - What constitutes a “better fit?”
@@ -153,15 +153,15 @@
 - What information are my diagnostics giving me?
     - How do I think about model refinements in light of that information
 
-### 4.1 - Learning Objectives: Students will be able to
+### Learning Objectives: Students will be able to
 
 - **compare two variations of a model** (say, a linear model and a quadratic model) and argue for which model better captures the phenomenon
 - For a given model, **interpret their model qualitatively**
 - For a given model, **suggest and justify a refinement to it**
 
-## 5 - Sharing/publicizing the model (reproducible research/open science)
+## Sharing/publicizing the model (reproducible research/open science)
 
-### 5.1 - Learning Objectives: Students will be able to
+### Learning Objectives: Students will be able to
 
 - **Create an iPython Notebook** that mixes both Python code and explanatory markdown
 - **Share an iPython Notebook** using NBconvert / NBviewer
@@ -172,13 +172,13 @@
     - **justify their modifications**
     - **Issue a pull request** on the upstream repository
 
-## 6 - Assessing/Comparing/Debating models
+## Assessing/Comparing/Debating models
 
 // Some of the really cool intellectual meat. Given the kind of diagnostic information we get (cluster 3) and possibly being able to share our models (cluster 5), how do we make decisions about how well the model is working and whether to refine it (cluster 3). This is where we get into the work of justifying a model we’ve built, exploring whether our asusmptions (cluster 1) held sway, and so on.
 
 // 2015-08-26 - I actually think much of this is covered by the first 5 clusters :-/
 
-## 7 - Data Science
+## Data Science
 
 ### Understanding data
 
