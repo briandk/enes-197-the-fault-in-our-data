@@ -196,7 +196,7 @@
 ### Plotting
 
 - Plot and *interpret* a distribution of 1-variable
-- Plot and *interpret* a graphic of multiple variables \[scatterplot, box-and-whiskers, pie chart, time series, line graph, bar graph, compositions of plots, experimental scatterplot, subplots, contour plot\]
+- Plot and *interpret* a graphic of multiple variables scatterplot, box-and-whiskers, pie chart, time series, line graph, bar graph, compositions of plots, experimental scatterplot, subplots, contour plot
 - Use aesthetics to encode multiple dimensions of information into a single plot (e.g., using stroke-color, shape, size, fill-color, opacity, and line-type to encode additional information)
 - Use [small multiples](https://en.wikipedia.org/wiki/Small_multiple) to encode multiple dimensions of information into a single plot (facetting by a variable, for example, or a [scatterplot matrix](http://docs.ggplot2.org/0.9.2.1/plotmatrix.html)
 
