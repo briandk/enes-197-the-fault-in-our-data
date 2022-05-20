@@ -1,4 +1,8 @@
+formulaic
 matplotlib
 pandas
 plotnine
+polars
+scikit-learn
 seaborn
+statsmodels

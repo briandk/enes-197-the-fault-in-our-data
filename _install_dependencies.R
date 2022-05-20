@@ -1,5 +1,9 @@
 # Necessary for `bookdown::bs4_book()` output format
-install.packages(c("bookdown",
+install.packages(c("remotes"))
+
+remotes::install_github("rstudio/bookdown")
+
+install.packages(c(
                    "bslib",
                    "downlit",
                    "dplyr",
@@ -7,3 +11,4 @@ install.packages(c("bookdown",
                    "reticulate",
                    "tidyverse",
                    "xml2"))
+
