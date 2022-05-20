@@ -34,6 +34,10 @@ jobs:
       - name: Setup renv
         uses: r-lib/actions/setup-renv@v2
 
+      - name: Install R Dependencies
+        run: |
+          _install_R_dependencies.R
+
       - name: Setup Python
         uses: actions/setup-python@v3
         with:
