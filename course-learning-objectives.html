@@ -6,14 +6,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>Chapter 2 Course Learning Objectives | ENES 197: The Fault in Our Data</title>
 <meta name="author" content="Brian A. Danielak">
-<meta name="description" content="2.1 Modeling begins before you ever touch a computer How do I understand the system of interest? Within that system, what phenomena am I interested in? What entities do I think are relevant for my...">
+<meta name="description" content="2.1 Manipulating Data Express data manipulations in terms of tidyverse/siuba verbs: select columns of data arrange data based on values in a column filter rows of data by some predicate/condition...">
 <meta name="generator" content="bookdown 0.26 with bs4_book()">
 <meta property="og:title" content="Chapter 2 Course Learning Objectives | ENES 197: The Fault in Our Data">
 <meta property="og:type" content="book">
-<meta property="og:description" content="2.1 Modeling begins before you ever touch a computer How do I understand the system of interest? Within that system, what phenomena am I interested in? What entities do I think are relevant for my...">
+<meta property="og:description" content="2.1 Manipulating Data Express data manipulations in terms of tidyverse/siuba verbs: select columns of data arrange data based on values in a column filter rows of data by some predicate/condition...">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Chapter 2 Course Learning Objectives | ENES 197: The Fault in Our Data">
-<meta name="twitter:description" content="2.1 Modeling begins before you ever touch a computer How do I understand the system of interest? Within that system, what phenomena am I interested in? What entities do I think are relevant for my...">
+<meta name="twitter:description" content="2.1 Manipulating Data Express data manipulations in terms of tidyverse/siuba verbs: select columns of data arrange data based on values in a column filter rows of data by some predicate/condition...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
 <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.3.1/transition.js"></script><script src="libs/bs3compat-0.3.1/tabs.js"></script><script src="libs/bs3compat-0.3.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
@@ -58,186 +58,76 @@
 <h1>
 <span class="header-section-number">2</span> Course Learning Objectives<a class="anchor" aria-label="anchor" href="#course-learning-objectives"><i class="fas fa-link"></i></a>
 </h1>
-<div id="modeling-begins-before-you-ever-touch-a-computer" class="section level2" number="2.1">
+<div id="manipulating-data" class="section level2" number="2.1">
 <h2>
-<span class="header-section-number">2.1</span> Modeling begins before you ever touch a computer<a class="anchor" aria-label="anchor" href="#modeling-begins-before-you-ever-touch-a-computer"><i class="fas fa-link"></i></a>
+<span class="header-section-number">2.1</span> Manipulating Data<a class="anchor" aria-label="anchor" href="#manipulating-data"><i class="fas fa-link"></i></a>
 </h2>
 <ul>
-<li>How do I understand the system of interest?</li>
-<li>Within that system, what phenomena am I interested in?</li>
-<li>What entities do I think are relevant for my model?</li>
-<li>How might I qualitatively describe entity relationships in the model? (Example: predators hunt prey, so predators should have some contribution to the reduction of prey.)</li>
-<li>What simplifications do I <em>know</em> I’m making?</li>
-<li>How can I express expectations of/predictions about the model? (E.g., with one wolf and 10 million rabbits, I don’t think there will be much of a predator effect. Or: here’s a sketch of the path I think this orbiting body might take. Or: based on <a href="https://kerbalspaceprogram.com/kspstore/index.php?p=22">my experiences with kerbal space program</a>, I figure the object would take a path like this.)</li>
-</ul>
-<div id="for-a-given-situation-to-be-modeled-students-will-be-able-to" class="section level3" number="2.1.1">
-<h3>
-<span class="header-section-number">2.1.1</span> For a given situation-to-be-modeled, Students will be able to<a class="anchor" aria-label="anchor" href="#for-a-given-situation-to-be-modeled-students-will-be-able-to"><i class="fas fa-link"></i></a>
-</h3>
+<li>Express data manipulations in terms of tidyverse/siuba verbs:
 <ul>
 <li>
-<strong>describe one or more phenomena</strong> they want their model to address.</li>
+<strong>select</strong> columns of data</li>
 <li>
-<strong>state and justify</strong> (with words, pictures, gestures) which <strong>entities they care about</strong> for this model. . (“Our model needs to include/account for <em>__ because __</em>). This can also be phrased as <strong>state and justify the inclusion of entities in their model</strong>
+<strong>arrange</strong> data based on values in a column</li>
+<li>
+<strong>filter</strong> rows of data by some predicate/condition</li>
+<li>
+<strong>group</strong> rows of data by a columnar value</li>
+<li>
+<strong>summarize</strong> grouped data by some aggregate measure (mean, median, sum)</li>
+<li>
+<strong>mutate</strong> columns by applying a transformation function to data values (e.g., creating a new column of data based on existing values; transforming categorical into numeric and vice versa)</li>
+<li>
+<strong>count</strong> observations based on a column value</li>
+</ul>
 </li>
-<li>
-<strong>identify and justify simplifications</strong> their model makes. (Our model ignores air resistance because ___)</li>
-<li>
-<strong>qualitatively describe entity relationships in the model.</strong> (E.g., the traffic jam may propagate backwards through traffic, because each car won’t decelerate until it’s within x of the rear bumper of the car in front. Or: roughly speaking, a wolf will seek a rabbit if it finds one, and a rabbit will evade a wolf if it detects one.)</li>
-<li>
-<strong>predict or hypothesize how the model may behave</strong> (E.g., If we give cars on the highway high initial speeds and a very low braking distance threshold (how far from the next car they’ll be before they start decelerating), there will be guaranteed crashes. Or: If rabbits are fast and can hear wolves coming from far away, the wolves won’t be successful predators. But, if we can somehow get the wolves to hunt as a pack and surround a rabbit, they should be better able to catch rabbits.) One way we might start to assess this is “if you wanted to tweak the simulation to make the wolves better hunters without changing the rabbit behavior, what might you do?” Or “suppose the wolf population could adapt and become more efficient at hunting rabbits. Give an example of a new behavior you might give them to hunt more efficiently and show in pseudocode how you might roughly encode the behavior into the model.)</li>
 </ul>
 </div>
-</div>
-<div id="formalizing-the-model" class="section level2" number="2.2">
+<div id="understanding-a-grammar-of-graphics" class="section level2" number="2.2">
 <h2>
-<span class="header-section-number">2.2</span> Formalizing the model<a class="anchor" aria-label="anchor" href="#formalizing-the-model"><i class="fas fa-link"></i></a>
+<span class="header-section-number">2.2</span> Understanding a grammar of graphics<a class="anchor" aria-label="anchor" href="#understanding-a-grammar-of-graphics"><i class="fas fa-link"></i></a>
+</h2>
+<p>Make and analyze plots using Wilkinson’s Grammar of Graphics</p>
+<ul>
+<li>Analyzing Plots
+<ul>
+<li>
+<strong>Identify</strong> the coordinate system of a plot</li>
+<li>
+<strong>identify</strong> the layers of a plot</li>
+<li>
+<strong>specify</strong> the aesthetic mappings of a plot</li>
+<li>
+<strong>specify</strong> scales used in the aesthetic mappings</li>
+</ul>
+</li>
+<li>Making Plots
+<ul>
+<li>
+<strong>choose</strong> and <strong>justify</strong> the appropriate coordinate system for a plot</li>
+<li>
+<strong>choose</strong> and <strong>justify</strong> the appropriate aesthetic mappings of a plot</li>
+<li>
+<strong>choose</strong> and <strong>justify</strong> scales to apply to those aesthetic mappings</li>
+</ul>
+</li>
+</ul>
+</div>
+<div id="fitting-a-model-to-data" class="section level2" number="2.3">
+<h2>
+<span class="header-section-number">2.3</span> Fitting a model to data<a class="anchor" aria-label="anchor" href="#fitting-a-model-to-data"><i class="fas fa-link"></i></a>
 </h2>
 <ul>
-<li>What are different ways we might encode/represent a model? (difference equations? Python Code? stock/flow/converter diagrams? other diagrams?)</li>
-<li>For many of the models we’ll build, we’ll need to be able to express behaviors, do some calculations, and store/move/manipulate some data. In service of those aims, in Python, how can we
-<ul>
-<li>Store information for use later?</li>
-<li>Represent numbers and convert between their forms? (Int, Float)</li>
-<li>Perform operations on numbers (for example, arithmetic. If you’ve never programmed before, <code>*</code> as the multiplication operator may not be obvious)</li>
-<li>Represent letters/words?</li>
-<li>Perform operations on letters/words? (Find regular patterns, make substitutions, convert case, concatenate, split)?</li>
-<li>Create data by composing words/letters and numbers? (Lists are ordered like trains. Dicts are kind of like buckets of labeled stuff.)</li>
-<li>Perform repeated operations on those compositions, including iteration. (If we learn primitives and manipulating primitives, then it makes sense to learn compositions and manipulating compositions.)</li>
-<li>Bundle up repeated operations so they’re easier to invoke/apply later (function definition)</li>
-<li>Pull in external collections of bundled-up procedures (import other modules/packages/libraries)</li>
-</ul>
-</li>
-<li>For many of the models we’ll build, we’ll try to take advantage of specific advantages we get for free with SciPy and NumPy. In SciPy/NumPy how can we:
-<ul>
-<li>Get statistical information about a collection of numerical data. (the <code>max</code>, <code>min</code>, <code>cumsum</code>, <code>var</code> and <code>mean</code> methods of <code>ndarray</code>, for example)</li>
-<li>Perform operations using the numbers in a collection (the <code>sum</code> method of an <code>ndarray</code>, for example)</li>
-<li>Iterate over an array of data (<code>numpy.nditer</code>?)</li>
-<li>// Fill in more objectives here</li>
-</ul>
-</li>
-<li>How can we see different representational forms as comparable articulations of the same model?
-<ul>
-<li>How do changes to one representation of a model correspond to changes in one or more other representations?
-<ul>
-<li>If we change a relationship in a model diagram, how does that affect any difference equations we might have written?</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>What are the different kinds of engines/paradigms that can drive models?
-<ul>
-<li>Deterministic systems with a centralized parameter (such as time), where objects in the model update in response to discrete, progressive changes to that parameter. Here, our main task is to specify update procedures as functions of the parameters of the system.</li>
-<li>Stochastic (dice rolling) processes, where we inject elements of randomness and/or probability
-<ul>
-<li>Why would we want to make a model non-deterministic?</li>
-<li>Why would we include randomness?</li>
-</ul>
-</li>
-<li>Agent-based Modeling, where we’re trying to produce simple rule-based behavior to govern individual parts of the system. Rather than thinking of these as system-wide updates based on parameters, we can think of this as individual agents <em>reacting</em> to their own state and what’s around them.</li>
-<li>Markov Chain Monte-Carlo</li>
-</ul>
-</li>
-</ul>
-<div id="when-it-comes-to-formalizing-models-students-will-be-able-to" class="section level3" number="2.2.1">
-<h3>
-<span class="header-section-number">2.2.1</span> When it comes to formalizing models, students will be able to<a class="anchor" aria-label="anchor" href="#when-it-comes-to-formalizing-models-students-will-be-able-to"><i class="fas fa-link"></i></a>
-</h3>
-<div id="in-scratch" class="section level4" number="2.2.1.1">
-<h4>
-<span class="header-section-number">2.2.1.1</span> In Scratch:<a class="anchor" aria-label="anchor" href="#in-scratch"><i class="fas fa-link"></i></a>
-</h4>
-<ul>
-<li>Use triggers (events) to start/stop a program</li>
-<li>Write a top-level comment on code</li>
-<li>Write a code comment attached to a specific block</li>
-<li>Identify different datatypes (booleans, expressions, strings)</li>
-<li>Use abstractions for iteration (repeat functions) to perform a task multiple times</li>
-<li>Use control flow to create conditional branching in code</li>
-<li>Create a variable and access its contents</li>
-<li>Create a list</li>
-<li>Add an item to a list</li>
-<li>Delete an item from a list</li>
-<li>Replace an item in a list</li>
-<li>Use positional indexing to retrieve a list item</li>
-<li>Retrieve a slice/subsection of a list</li>
-<li>Print debugging output using the “say” block (which, confusingly, is under “Looks”)</li>
-<li>Use operations to add, subtract, and multiply two numbers</li>
-<li>Write an (in)equality test in terms of one or more variables</li>
-<li>Refactor repetitive code using abstraction</li>
-<li>Define blocks (functions) that wrap chunks of procedures</li>
-<li>Predict, Observe, and Explain/Reconcile what a short scratch program (~10 blocks or fewer) will do</li>
+<li>Use scikit-learn’s linear regression to fit a multi-feature linear model (multiple linear regression)</li>
 </ul>
 </div>
-<div id="in-base-python" class="section level4" number="2.2.1.2">
-<h4>
-<span class="header-section-number">2.2.1.2</span> In base Python:<a class="anchor" aria-label="anchor" href="#in-base-python"><i class="fas fa-link"></i></a>
-</h4>
-<ul>
-<li>
-<strong>Store information</strong> for use later</li>
-<li><strong>Retrive Stored Information</strong></li>
-<li>
-<strong>Represent numbers and convert</strong> between their forms (<code>Int</code>, <code>Float</code>)</li>
-<li>
-<strong>Perform operations on numbers</strong> (for example, arithmetic. If you’ve never programmed before, <code>*</code> as the multiplication operator may not be obvious)</li>
-<li><strong>Represent letters/words</strong></li>
-<li>
-<strong>Perform operations on letters/words</strong> (Find regular patterns, make substitutions, convert case, concatenate, split)?</li>
-<li>
-<strong>Create data by composing words/letters and numbers</strong> (Lists are ordered like trains. Dicts are kind of like buckets of labeled stuff.)</li>
-<li>
-<strong>Perform repeated operations on those compositions</strong>, including iteration. (If we learn primitives and manipulating primitives, then it makes sense to learn compositions and manipulating compositions.)</li>
-<li>
-<strong>Bundle up repeated operations</strong> so they’re easier to invoke/apply later (function definition)</li>
-<li>
-<strong>Pull in external collections of bundled-up procedures</strong> (import other modules/packages/libraries)</li>
-</ul>
-</div>
-<div id="in-numpy-pandas" class="section level4" number="2.2.1.3">
-<h4>
-<span class="header-section-number">2.2.1.3</span> In NumPy / Pandas<a class="anchor" aria-label="anchor" href="#in-numpy-pandas"><i class="fas fa-link"></i></a>
-</h4>
-<ul>
-<li>
-<strong>Get statistical information</strong> about a collection of numerical data. (the <code>max</code>, <code>min</code>, <code>cumsum</code>, <code>var</code> and <code>mean</code> methods of <code>ndarray</code>, for example)</li>
-<li>Perform operations using the numbers in a collection (the <code>sum</code> method of an <code>ndarray</code>, for example)</li>
-<li>
-<strong>Iterate over an array of data</strong> (<code>numpy.nditer</code>?)</li>
-<li>// Fill in more objectives here</li>
-<li>Across Formal Models:</li>
-<li>
-<strong>Express and discuss relationships</strong> between difference equations and a model produced in code(?)</li>
-</ul>
-</div>
-<div id="across-different-formalisms-of-a-model" class="section level4" number="2.2.1.4">
-<h4>
-<span class="header-section-number">2.2.1.4</span> Across different formalisms of a model:<a class="anchor" aria-label="anchor" href="#across-different-formalisms-of-a-model"><i class="fas fa-link"></i></a>
-</h4>
-<ul>
-<li>Describe how a given piece of code <em>implements</em> a relationship</li>
-<li>
-<strong>Determine</strong> whether a piece of code faithfully implements part of a model expressed in some other format (diagram, difference equation)</li>
-<li>Across Formal Modeling Paradigms:</li>
-<li>
-<strong>Describe and compare the mechanisms of</strong>
-<ul>
-<li>Deterministic systems with a centralized parameter (such as time), where objects in the model update in response to discrete, progressive changes to that parameter. Here, our main task is to specify update procedures as functions of the parameters of the system.</li>
-<li>Agent-based Modeling, where we’re trying to produce simple rule-based behavior to govern individual parts of the system. Rather than thinking of these as system-wide updates based on parameters, we can think of this as individual agents <em>reacting</em> to their own state and what’s around them.</li>
-<li>Markov Chain Monte-Carlo</li>
-</ul>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div id="interrogating-the-model" class="section level2" number="2.3">
+<div id="interrogating-a-model" class="section level2" number="2.4">
 <h2>
-<span class="header-section-number">2.3</span> Interrogating the model<a class="anchor" aria-label="anchor" href="#interrogating-the-model"><i class="fas fa-link"></i></a>
+<span class="header-section-number">2.4</span> Interrogating a model<a class="anchor" aria-label="anchor" href="#interrogating-a-model"><i class="fas fa-link"></i></a>
 </h2>
-<div id="how-we-think-about-interrogating-the-model" class="section level3" number="2.3.1">
+<div id="how-we-think-about-interrogating-the-model" class="section level3" number="2.4.1">
 <h3>
-<span class="header-section-number">2.3.1</span> How we think about interrogating the model<a class="anchor" aria-label="anchor" href="#how-we-think-about-interrogating-the-model"><i class="fas fa-link"></i></a>
+<span class="header-section-number">2.4.1</span> How we think about interrogating the model<a class="anchor" aria-label="anchor" href="#how-we-think-about-interrogating-the-model"><i class="fas fa-link"></i></a>
 </h3>
 <ul>
 <li>How do I figure out what’s happening when I run my model?</li>
@@ -272,9 +162,9 @@
 <li>What statements can I make (in plain writing, say English) about the performance of my model?</li>
 </ul>
 </div>
-<div id="learning-objectives-for-a-given-model-students-will-be-able-to" class="section level3" number="2.3.2">
+<div id="learning-objectives-for-a-given-model-students-will-be-able-to" class="section level3" number="2.4.2">
 <h3>
-<span class="header-section-number">2.3.2</span> Learning Objectives: For a given model, students will be able to<a class="anchor" aria-label="anchor" href="#learning-objectives-for-a-given-model-students-will-be-able-to"><i class="fas fa-link"></i></a>
+<span class="header-section-number">2.4.2</span> Learning Objectives: For a given model, students will be able to<a class="anchor" aria-label="anchor" href="#learning-objectives-for-a-given-model-students-will-be-able-to"><i class="fas fa-link"></i></a>
 </h3>
 <ul>
 <li>
@@ -292,10 +182,14 @@
 </ul>
 </div>
 </div>
-<div id="refining-the-model" class="section level2" number="2.4">
+<div id="refining-a-model" class="section level2" number="2.5">
 <h2>
-<span class="header-section-number">2.4</span> Refining the model<a class="anchor" aria-label="anchor" href="#refining-the-model"><i class="fas fa-link"></i></a>
+<span class="header-section-number">2.5</span> Refining a model<a class="anchor" aria-label="anchor" href="#refining-a-model"><i class="fas fa-link"></i></a>
 </h2>
+<div id="how-we-think-about-refining-the-model" class="section level3" number="2.5.1">
+<h3>
+<span class="header-section-number">2.5.1</span> How we think about refining the model<a class="anchor" aria-label="anchor" href="#how-we-think-about-refining-the-model"><i class="fas fa-link"></i></a>
+</h3>
 <ul>
 <li>How do I achieve a better fit?
 <ul>
@@ -326,9 +220,10 @@
 </ul>
 </li>
 </ul>
-<div id="learning-objectives-students-will-be-able-to" class="section level3" number="2.4.1">
+</div>
+<div id="learning-objectives-students-will-be-able-to" class="section level3" number="2.5.2">
 <h3>
-<span class="header-section-number">2.4.1</span> Learning Objectives: Students will be able to<a class="anchor" aria-label="anchor" href="#learning-objectives-students-will-be-able-to"><i class="fas fa-link"></i></a>
+<span class="header-section-number">2.5.2</span> Learning Objectives: Students will be able to<a class="anchor" aria-label="anchor" href="#learning-objectives-students-will-be-able-to"><i class="fas fa-link"></i></a>
 </h3>
 <ul>
 <li>
@@ -340,13 +235,43 @@
 </ul>
 </div>
 </div>
-<div id="sharingpublicizing-the-model-reproducible-researchopen-science" class="section level2" number="2.5">
+<div id="understanding-data" class="section level2" number="2.6">
 <h2>
-<span class="header-section-number">2.5</span> Sharing/publicizing the model (reproducible research/open science)<a class="anchor" aria-label="anchor" href="#sharingpublicizing-the-model-reproducible-researchopen-science"><i class="fas fa-link"></i></a>
+<span class="header-section-number">2.6</span> Understanding data<a class="anchor" aria-label="anchor" href="#understanding-data"><i class="fas fa-link"></i></a>
 </h2>
-<div id="learning-objectives-students-will-be-able-to-1" class="section level3" number="2.5.1">
+<ul>
+<li>Determine the feature-space (what are the columns?)</li>
+<li>Make a dataset <a href="https://www.jstatsoft.org/index.php/jss/article/view/v059i10/v59i10.pdf">tidy</a>
+</li>
+<li>Get numerical summaries of data (mean, median, mode, variance)</li>
+<li>Visually and numerically examine correlations between features</li>
+<li>Filter a dataset’s rows by some condition, for example <code>flint_data[flint_data[‘lead_levels’] &gt; legal_limit]</code>
+</li>
+<li>Group a dataset by categorical values (<code>flint_data.groupby(‘zip_code’).sum()</code>)</li>
+<li>Generate a by-group analysis based on values of a feature (for example, with aggregate statistics like sum, count, mean)</li>
+<li>Given a dataset, fit a parametric model to the data</li>
+<li>As in modeling, assess the fit, faithfulness, and limitations of the model</li>
+</ul>
+</div>
+<div id="plotting" class="section level2" number="2.7">
+<h2>
+<span class="header-section-number">2.7</span> Plotting<a class="anchor" aria-label="anchor" href="#plotting"><i class="fas fa-link"></i></a>
+</h2>
+<ul>
+<li>Plot and <em>interpret</em> a distribution of 1-variable</li>
+<li>Plot and <em>interpret</em> a graphic of multiple variables scatterplot, box-and-whiskers, pie chart, time series, line graph, bar graph, compositions of plots, experimental scatterplot, subplots, contour plot</li>
+<li>Use aesthetics to encode multiple dimensions of information into a single plot (e.g., using stroke-color, shape, size, fill-color, opacity, and line-type to encode additional information)</li>
+<li>Use <a href="https://en.wikipedia.org/wiki/Small_multiple">small multiples</a> to encode multiple dimensions of information into a single plot (facetting by a variable, for example, or a <a href="http://docs.ggplot2.org/0.9.2.1/plotmatrix.html">scatterplot matrix</a>
+</li>
+</ul>
+</div>
+<div id="sharingpublicizing-an-analysis-reproducible-researchopen-science" class="section level2" number="2.8">
+<h2>
+<span class="header-section-number">2.8</span> Sharing/publicizing an analysis (reproducible research/open science)<a class="anchor" aria-label="anchor" href="#sharingpublicizing-an-analysis-reproducible-researchopen-science"><i class="fas fa-link"></i></a>
+</h2>
+<div id="learning-objectives-students-will-be-able-to-1" class="section level3" number="2.8.1">
 <h3>
-<span class="header-section-number">2.5.1</span> Learning Objectives: Students will be able to<a class="anchor" aria-label="anchor" href="#learning-objectives-students-will-be-able-to-1"><i class="fas fa-link"></i></a>
+<span class="header-section-number">2.8.1</span> Learning Objectives: Students will be able to<a class="anchor" aria-label="anchor" href="#learning-objectives-students-will-be-able-to-1"><i class="fas fa-link"></i></a>
 </h3>
 <ul>
 <li>
@@ -368,62 +293,6 @@
 </ul>
 </div>
 </div>
-<div id="assessingcomparingdebating-models" class="section level2" number="2.6">
-<h2>
-<span class="header-section-number">2.6</span> Assessing/Comparing/Debating models<a class="anchor" aria-label="anchor" href="#assessingcomparingdebating-models"><i class="fas fa-link"></i></a>
-</h2>
-<p>// Some of the really cool intellectual meat. Given the kind of diagnostic information we get (cluster 3) and possibly being able to share our models (cluster 5), how do we make decisions about how well the model is working and whether to refine it (cluster 3). This is where we get into the work of justifying a model we’ve built, exploring whether our asusmptions (cluster 1) held sway, and so on.</p>
-<p>// 2015-08-26 - I actually think much of this is covered by the first 5 clusters :-/</p>
-</div>
-<div id="data-science" class="section level2" number="2.7">
-<h2>
-<span class="header-section-number">2.7</span> Data Science<a class="anchor" aria-label="anchor" href="#data-science"><i class="fas fa-link"></i></a>
-</h2>
-<div id="understanding-data" class="section level3" number="2.7.1">
-<h3>
-<span class="header-section-number">2.7.1</span> Understanding data<a class="anchor" aria-label="anchor" href="#understanding-data"><i class="fas fa-link"></i></a>
-</h3>
-<ul>
-<li>Determine the feature-space (what are the columns?)</li>
-<li>Make a dataset <a href="https://www.jstatsoft.org/index.php/jss/article/view/v059i10/v59i10.pdf">tidy</a>
-</li>
-<li>Get numerical summaries of data (mean, median, mode, variance)</li>
-<li>Create a procedure for a statistic (mean, median, mode)</li>
-<li>Visually and numerically examine correlations between features</li>
-<li>Filter a dataset’s rows by some condition, for example <code>flint_data[flint_data['lead_levels'] &gt; legal_limit]</code>
-</li>
-<li>Group a dataset by categorical values (<code>flint_data.groupby('zip_code').sum()</code>)</li>
-<li>Generate a by-group analysis based on values of a feature (for example, with aggregate statistics like sum, count, mean)</li>
-<li>Given a dataset, fit a parametric model to the data</li>
-<li>As in modeling, assess the fit, faithfulness, and limitations of the model</li>
-</ul>
-</div>
-<div id="plotting" class="section level3" number="2.7.2">
-<h3>
-<span class="header-section-number">2.7.2</span> Plotting<a class="anchor" aria-label="anchor" href="#plotting"><i class="fas fa-link"></i></a>
-</h3>
-<ul>
-<li>Plot and <em>interpret</em> a distribution of 1-variable</li>
-<li>Plot and <em>interpret</em> a graphic of multiple variables scatterplot, box-and-whiskers, pie chart, time series, line graph, bar graph, compositions of plots, experimental scatterplot, subplots, contour plot</li>
-<li>Use aesthetics to encode multiple dimensions of information into a single plot (e.g., using stroke-color, shape, size, fill-color, opacity, and line-type to encode additional information)</li>
-<li>Use <a href="https://en.wikipedia.org/wiki/Small_multiple">small multiples</a> to encode multiple dimensions of information into a single plot (facetting by a variable, for example, or a <a href="http://docs.ggplot2.org/0.9.2.1/plotmatrix.html">scatterplot matrix</a>
-</li>
-</ul>
-</div>
-<div id="fitting-a-model-to-data" class="section level3" number="2.7.3">
-<h3>
-<span class="header-section-number">2.7.3</span> Fitting a model to data<a class="anchor" aria-label="anchor" href="#fitting-a-model-to-data"><i class="fas fa-link"></i></a>
-</h3>
-<ul>
-<li>Describe the iterative process of updating the state of a variable</li>
-<li>Recognize the relationship between a differential equation, difference equation, and state-update code in a model</li>
-<li>Given a 2-dimensional dataset, try choosing parameters to minimize ordinary least squares error</li>
-<li>Enact a gradient descent by playing the role of a walker (blindfolded student) and a guide (who gives gradient information). See “Gradient Descent Activity”</li>
-<li>Write a simple python program to do gradient descent on a slope-intercept linear model</li>
-<li>Use scikit-learn’s stochastic gradient descent to fit a multi-feature linear model (multiple linear regression)</li>
-</ul>
-</div>
-</div>
 </div>
   <div class="chapter-nav">
 <div class="prev"><a href="index.html"><span class="header-section-number">1</span> About</a></div>
@@ -432,31 +301,25 @@
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
       <ul class="nav navbar-nav">
 <li><a class="nav-link" href="#course-learning-objectives"><span class="header-section-number">2</span> Course Learning Objectives</a></li>
+<li><a class="nav-link" href="#manipulating-data"><span class="header-section-number">2.1</span> Manipulating Data</a></li>
+<li><a class="nav-link" href="#understanding-a-grammar-of-graphics"><span class="header-section-number">2.2</span> Understanding a grammar of graphics</a></li>
+<li><a class="nav-link" href="#fitting-a-model-to-data"><span class="header-section-number">2.3</span> Fitting a model to data</a></li>
 <li>
-<a class="nav-link" href="#modeling-begins-before-you-ever-touch-a-computer"><span class="header-section-number">2.1</span> Modeling begins before you ever touch a computer</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#for-a-given-situation-to-be-modeled-students-will-be-able-to"><span class="header-section-number">2.1.1</span> For a given situation-to-be-modeled, Students will be able to</a></li></ul>
-</li>
-<li>
-<a class="nav-link" href="#formalizing-the-model"><span class="header-section-number">2.2</span> Formalizing the model</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#when-it-comes-to-formalizing-models-students-will-be-able-to"><span class="header-section-number">2.2.1</span> When it comes to formalizing models, students will be able to</a></li></ul>
-</li>
-<li>
-<a class="nav-link" href="#interrogating-the-model"><span class="header-section-number">2.3</span> Interrogating the model</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#how-we-think-about-interrogating-the-model"><span class="header-section-number">2.3.1</span> How we think about interrogating the model</a></li>
-<li><a class="nav-link" href="#learning-objectives-for-a-given-model-students-will-be-able-to"><span class="header-section-number">2.3.2</span> Learning Objectives: For a given model, students will be able to</a></li>
+<a class="nav-link" href="#interrogating-a-model"><span class="header-section-number">2.4</span> Interrogating a model</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#how-we-think-about-interrogating-the-model"><span class="header-section-number">2.4.1</span> How we think about interrogating the model</a></li>
+<li><a class="nav-link" href="#learning-objectives-for-a-given-model-students-will-be-able-to"><span class="header-section-number">2.4.2</span> Learning Objectives: For a given model, students will be able to</a></li>
 </ul>
 </li>
 <li>
-<a class="nav-link" href="#refining-the-model"><span class="header-section-number">2.4</span> Refining the model</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#learning-objectives-students-will-be-able-to"><span class="header-section-number">2.4.1</span> Learning Objectives: Students will be able to</a></li></ul>
-</li>
-<li>
-<a class="nav-link" href="#sharingpublicizing-the-model-reproducible-researchopen-science"><span class="header-section-number">2.5</span> Sharing/publicizing the model (reproducible research/open science)</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#learning-objectives-students-will-be-able-to-1"><span class="header-section-number">2.5.1</span> Learning Objectives: Students will be able to</a></li></ul>
-</li>
-<li><a class="nav-link" href="#assessingcomparingdebating-models"><span class="header-section-number">2.6</span> Assessing/Comparing/Debating models</a></li>
-<li>
-<a class="nav-link" href="#data-science"><span class="header-section-number">2.7</span> Data Science</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#understanding-data"><span class="header-section-number">2.7.1</span> Understanding data</a></li>
-<li><a class="nav-link" href="#plotting"><span class="header-section-number">2.7.2</span> Plotting</a></li>
-<li><a class="nav-link" href="#fitting-a-model-to-data"><span class="header-section-number">2.7.3</span> Fitting a model to data</a></li>
+<a class="nav-link" href="#refining-a-model"><span class="header-section-number">2.5</span> Refining a model</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#how-we-think-about-refining-the-model"><span class="header-section-number">2.5.1</span> How we think about refining the model</a></li>
+<li><a class="nav-link" href="#learning-objectives-students-will-be-able-to"><span class="header-section-number">2.5.2</span> Learning Objectives: Students will be able to</a></li>
 </ul>
+</li>
+<li><a class="nav-link" href="#understanding-data"><span class="header-section-number">2.6</span> Understanding data</a></li>
+<li><a class="nav-link" href="#plotting"><span class="header-section-number">2.7</span> Plotting</a></li>
+<li>
+<a class="nav-link" href="#sharingpublicizing-an-analysis-reproducible-researchopen-science"><span class="header-section-number">2.8</span> Sharing/publicizing an analysis (reproducible research/open science)</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#learning-objectives-students-will-be-able-to-1"><span class="header-section-number">2.8.1</span> Learning Objectives: Students will be able to</a></li></ul>
 </li>
 </ul>
 
@@ -475,7 +338,7 @@
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>ENES 197: The Fault in Our Data</strong>" was written by Brian A. Danielak. It was last built on 2022-05-19.</p>
+    <p>"<strong>ENES 197: The Fault in Our Data</strong>" was written by Brian A. Danielak. It was last built on 2022-05-20.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">
