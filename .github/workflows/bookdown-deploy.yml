@@ -36,7 +36,7 @@ jobs:
 
       - name: Install R Dependencies
         run: |
-          _install_R_dependencies.R
+          Rscript _install_R_dependencies.R
 
       - name: Setup Python
         uses: actions/setup-python@v3
