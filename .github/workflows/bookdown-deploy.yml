@@ -13,8 +13,6 @@ jobs:
     # Only restrict concurrency for non-PR jobs
     concurrency:
       group: pkgdown-${{ github.event_name != 'pull_request' || github.run_id }}
-    env:
-      GITHUB_PAT: ${{ secrets.GH_PAGES_TOKEN }}
     steps:
 
       - name: Checkout repo
@@ -49,6 +47,8 @@ jobs:
       - name: Install R Dependencies
         run: |
           Rscript _install_dependencies.R
+        env:
+          GITHUB_PAT: ${{ secrets.GH_PAGES_TOKEN }} 
 
       - name: Cache bookdown results
         uses: actions/cache@v2

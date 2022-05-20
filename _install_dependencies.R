@@ -1,6 +1,5 @@
-# Necessary for `bookdown::bs4_book()` output format
+# bslib is necessary for `bookdown::bs4_book()` output format
 install.packages(c("remotes"))
-
 remotes::install_github("rstudio/bookdown")
 
 install.packages(c(
