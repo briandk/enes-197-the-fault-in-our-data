@@ -2,7 +2,7 @@
 
 Here's some example Python code:
 
-```{python}
+```{python, eval = FALSE}
 from plotnine import geom_text
 def myFunction(x: str):
     pass
@@ -41,7 +41,7 @@ And here, to the best of my ability, is how Pygments tokenizes that code vs. how
 
 ## Seeing what syntax-coloring looks like with a default snippet from Pygments
 
-```{python}
+```{python, eval = FALSE}
 from typing import Iterator
 
 # This is an example
