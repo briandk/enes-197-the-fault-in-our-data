@@ -58,6 +58,5 @@ class Math:
 
 result = sum(Math.fib(42))
 print("The answer is {}".format(result))
-#> The answer is 88
 ```
 
