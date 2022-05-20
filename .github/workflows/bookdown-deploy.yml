@@ -14,9 +14,12 @@ jobs:
     concurrency:
       group: pkgdown-${{ github.event_name != 'pull_request' || github.run_id }}
     steps:
-
       - name: Checkout repo
         uses: actions/checkout@v3
+
+      - name: Install Ubuntu Packages
+        run: |
+          /usr/bin/sudo DEBIAN_FRONTEND=noninteractive apt-get install -y libcurl4-openssl-dev curl
 
       - name: Setup pandoc
         uses: r-lib/actions/setup-pandoc@v2
@@ -31,10 +34,6 @@ jobs:
       - name: Setup renv
         uses: r-lib/actions/setup-renv@v2
 
-      - name: Install Ubuntu Packages
-        run: |
-          /usr/bin/sudo DEBIAN_FRONTEND=noninteractive apt-get install -y libcurl4-openssl-dev curl
-
       - name: Setup Python
         uses: actions/setup-python@v3
         with:
@@ -43,12 +42,6 @@ jobs:
 
       - name: Install Python Dependencies
         run: pip install -r requirements.txt
-
-      - name: Install R Dependencies
-        run: |
-          Rscript _install_dependencies.R
-        env:
-          GITHUB_PAT: ${{ secrets.GH_PAGES_TOKEN }}
 
       - name: Cache bookdown results
         uses: actions/cache@v2
