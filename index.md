@@ -1,7 +1,7 @@
 --- 
 title: "ENES 197: The Fault in Our Data"
 author: "Brian A. Danielak"
-date: "2022-05-20"
+date: "2022-05-24"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib]
