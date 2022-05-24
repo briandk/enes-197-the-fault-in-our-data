@@ -14,39 +14,19 @@ biblio-style: apalike
 # csl: chicago-fullnote-bibliography.csl
 ---
 
-# About
+# Welcome {.unnumbered}
 
-This is a *sample* book written in **Markdown**. You can use anything that Pandoc's Markdown supports; for example, a math equation $a^2 + b^2 = c^2$.
+This is the website for **ENES 197: The Fault in Our Data**.
 
-## Usage
+## Semester Overview {.unnumbered}
 
-Each **bookdown** chapter is an .Rmd file, and each .Rmd file can contain one (and only one) chapter. A chapter *must* start with a first-level heading: `# A good chapter`, and can contain one (and only one) first-level heading.
+| Week Number | Topic                                       | Coding Topic                                             |
+|-------------|---------------------------------------------|----------------------------------------------------------|
+| 1           | Messiness in Data                           | Introduction to Python and Jupyter Notebooks             |
+| 2           | Data, Data Types, and DataFrames            | Data cleaning with `pandas` and `siuba`                  |
+| 3           | Visualizing Data with a Grammar of Graphics | Plotting with `plotnine`                                 |
+| 4           | Building Models                             | plotting with `plotnine`; `formulaic` and `scikit-learn` |
+| 5           | Data Analysis Case Studies                  | ---                                                      |
+| 6           | Project Work and Presentations              | ---                                                      |
 
-Use second-level and higher headings within chapters like: `## A short section` or `### An even shorter section`.
-
-The `index.Rmd` file is required, and is also your first book chapter. It will be the homepage when you render the book.
-
-## Render book
-
-You can render the HTML version of this example book without changing anything:
-
-1.  Find the **Build** pane in the RStudio IDE, and
-2.  Click on **Build Book**, then select your output format, or select "All formats" if you'd like to use multiple formats from the same book source files.
-
-Or build the book from the R console:
-
-
-```r
-bookdown::render_book()
-```
-
-To render this example to PDF as a `bookdown::pdf_book`, you'll need to install XeLaTeX. You are recommended to install TinyTeX (which includes XeLaTeX): <https://yihui.org/tinytex/>.
-
-## Preview book
-
-As you work, you may start a local server to live preview this HTML book. This preview will update as you edit the book when you save individual .Rmd files. You can start the server in a work session by using the RStudio add-in "Preview book", or from the R console:
-
-
-```r
-bookdown::serve_book()
-```
+: The week-by-week plan for the semester

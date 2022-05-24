@@ -4,16 +4,16 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Chapter 4 Comparing Tokenization in Pygments and Pandoc | ENES 197: The Fault in Our Data</title>
+<title>Chapter 3 Comparing Tokenization in Pygments and Pandoc | ENES 197: The Fault in Our Data</title>
 <meta name="author" content="Brian Danielak">
 <meta name="description" content="Here’s some example Python code: from plotnine import geom_text def myFunction(x: str):   pass And here, to the best of my ability, is how Pygments tokenizes that code vs. how Pandoc does it. Note...">
 <meta name="generator" content="bookdown 0.26 with bs4_book()">
-<meta property="og:title" content="Chapter 4 Comparing Tokenization in Pygments and Pandoc | ENES 197: The Fault in Our Data">
+<meta property="og:title" content="Chapter 3 Comparing Tokenization in Pygments and Pandoc | ENES 197: The Fault in Our Data">
 <meta property="og:type" content="book">
 <meta property="og:url" content="https://briandk.github.io/enes-197-the-fault-in-our-data/comparing-tokenization-in-pygments-and-pandoc.html">
 <meta property="og:description" content="Here’s some example Python code: from plotnine import geom_text def myFunction(x: str):   pass And here, to the best of my ability, is how Pygments tokenizes that code vs. how Pandoc does it. Note...">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Chapter 4 Comparing Tokenization in Pygments and Pandoc | ENES 197: The Fault in Our Data">
+<meta name="twitter:title" content="Chapter 3 Comparing Tokenization in Pygments and Pandoc | ENES 197: The Fault in Our Data">
 <meta name="twitter:description" content="Here’s some example Python code: from plotnine import geom_text def myFunction(x: str):   pass And here, to the best of my ability, is how Pygments tokenizes that code vs. how Pandoc does it. Note...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
@@ -44,10 +44,10 @@
 
       <nav aria-label="Table of contents"><h2>Table of contents</h2>
         <ul class="book-toc list-unstyled">
-<li><a class="" href="index.html"><span class="header-section-number">1</span> About</a></li>
-<li><a class="" href="course-learning-objectives.html"><span class="header-section-number">2</span> Course Learning Objectives</a></li>
-<li><a class="" href="hello-plot-with-python.html"><span class="header-section-number">3</span> Hello Plot with Python</a></li>
-<li><a class="active" href="comparing-tokenization-in-pygments-and-pandoc.html"><span class="header-section-number">4</span> Comparing Tokenization in Pygments and Pandoc</a></li>
+<li><a class="" href="index.html">Welcome</a></li>
+<li><a class="" href="course-learning-objectives.html"><span class="header-section-number">1</span> Course Learning Objectives</a></li>
+<li><a class="" href="hello-plot-with-python.html"><span class="header-section-number">2</span> Hello Plot with Python</a></li>
+<li><a class="active" href="comparing-tokenization-in-pygments-and-pandoc.html"><span class="header-section-number">3</span> Comparing Tokenization in Pygments and Pandoc</a></li>
 </ul>
 
         <div class="book-extra">
@@ -55,22 +55,22 @@
         </div>
       </nav>
 </div>
-  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="comparing-tokenization-in-pygments-and-pandoc" class="section level1" number="4">
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="comparing-tokenization-in-pygments-and-pandoc" class="section level1" number="3">
 <h1>
-<span class="header-section-number">4</span> Comparing Tokenization in Pygments and Pandoc<a class="anchor" aria-label="anchor" href="#comparing-tokenization-in-pygments-and-pandoc"><i class="fas fa-link"></i></a>
+<span class="header-section-number">3</span> Comparing Tokenization in Pygments and Pandoc<a class="anchor" aria-label="anchor" href="#comparing-tokenization-in-pygments-and-pandoc"><i class="fas fa-link"></i></a>
 </h1>
 <p>Here’s some example Python code:</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="comparing-tokenization-in-pygments-and-pandoc.html#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> plotnine <span class="im">import</span> geom_text</span>
-<span id="cb5-2"><a href="comparing-tokenization-in-pygments-and-pandoc.html#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> myFunction(x: <span class="bu">str</span>):</span>
-<span id="cb5-3"><a href="comparing-tokenization-in-pygments-and-pandoc.html#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">pass</span></span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="comparing-tokenization-in-pygments-and-pandoc.html#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> plotnine <span class="im">import</span> geom_text</span>
+<span id="cb3-2"><a href="comparing-tokenization-in-pygments-and-pandoc.html#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> myFunction(x: <span class="bu">str</span>):</span>
+<span id="cb3-3"><a href="comparing-tokenization-in-pygments-and-pandoc.html#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">pass</span></span></code></pre></div>
 <p>And here, to the best of my ability, is how Pygments tokenizes that code vs. how Pandoc does it. Note that Pygments seems to recognize and apply token types that pandoc does not (for example, Pygments recognizes punctuation (p) in the above code where pandoc does not. Note also that pandoc may assign token types for which there is no added style. These two behaviors mean:</p>
 <ul>
 <li><p>Unstyled code might still be semantically tokenized, but</p></li>
 <li><p>Untokenized code cannot and will not be styled</p></li>
 </ul>
-<div id="how-the-code-gets-tokenized" class="section level2" number="4.1">
+<div id="how-the-code-gets-tokenized" class="section level2" number="3.1">
 <h2>
-<span class="header-section-number">4.1</span> How the Code Gets Tokenized<a class="anchor" aria-label="anchor" href="#how-the-code-gets-tokenized"><i class="fas fa-link"></i></a>
+<span class="header-section-number">3.1</span> How the Code Gets Tokenized<a class="anchor" aria-label="anchor" href="#how-the-code-gets-tokenized"><i class="fas fa-link"></i></a>
 </h2>
 <div class="inline-table"><table class="table table-sm">
 <caption>Comparing how Python code gets tokenized in Pygments vs. Pandoc</caption>
@@ -179,24 +179,24 @@
 </tbody>
 </table></div>
 </div>
-<div id="seeing-what-syntax-coloring-looks-like-with-a-default-snippet-from-pygments" class="section level2" number="4.2">
+<div id="seeing-what-syntax-coloring-looks-like-with-a-default-snippet-from-pygments" class="section level2" number="3.2">
 <h2>
-<span class="header-section-number">4.2</span> Seeing what syntax-coloring looks like with a default snippet from Pygments<a class="anchor" aria-label="anchor" href="#seeing-what-syntax-coloring-looks-like-with-a-default-snippet-from-pygments"><i class="fas fa-link"></i></a>
+<span class="header-section-number">3.2</span> Seeing what syntax-coloring looks like with a default snippet from Pygments<a class="anchor" aria-label="anchor" href="#seeing-what-syntax-coloring-looks-like-with-a-default-snippet-from-pygments"><i class="fas fa-link"></i></a>
 </h2>
-<div class="sourceCode" id="cb6"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a href="comparing-tokenization-in-pygments-and-pandoc.html#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> typing <span class="im">import</span> Iterator</span>
-<span id="cb6-2"><a href="comparing-tokenization-in-pygments-and-pandoc.html#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-3"><a href="comparing-tokenization-in-pygments-and-pandoc.html#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="co"># This is an example</span></span>
-<span id="cb6-4"><a href="comparing-tokenization-in-pygments-and-pandoc.html#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Math:</span>
-<span id="cb6-5"><a href="comparing-tokenization-in-pygments-and-pandoc.html#cb6-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">@staticmethod</span></span>
-<span id="cb6-6"><a href="comparing-tokenization-in-pygments-and-pandoc.html#cb6-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> fib(n: <span class="bu">int</span>) <span class="op">-&gt;</span> Iterator[<span class="bu">int</span>]:</span>
-<span id="cb6-7"><a href="comparing-tokenization-in-pygments-and-pandoc.html#cb6-7" aria-hidden="true" tabindex="-1"></a>        <span class="co">""" Fibonacci series up to n """</span></span>
-<span id="cb6-8"><a href="comparing-tokenization-in-pygments-and-pandoc.html#cb6-8" aria-hidden="true" tabindex="-1"></a>        a, b <span class="op">=</span> <span class="dv">0</span>, <span class="dv">1</span></span>
-<span id="cb6-9"><a href="comparing-tokenization-in-pygments-and-pandoc.html#cb6-9" aria-hidden="true" tabindex="-1"></a>        <span class="cf">while</span> a <span class="op">&lt;</span> n:</span>
-<span id="cb6-10"><a href="comparing-tokenization-in-pygments-and-pandoc.html#cb6-10" aria-hidden="true" tabindex="-1"></a>            <span class="cf">yield</span> a</span>
-<span id="cb6-11"><a href="comparing-tokenization-in-pygments-and-pandoc.html#cb6-11" aria-hidden="true" tabindex="-1"></a>            a, b <span class="op">=</span> b, a <span class="op">+</span> b</span>
-<span id="cb6-12"><a href="comparing-tokenization-in-pygments-and-pandoc.html#cb6-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-13"><a href="comparing-tokenization-in-pygments-and-pandoc.html#cb6-13" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> <span class="bu">sum</span>(Math.fib(<span class="dv">42</span>))</span>
-<span id="cb6-14"><a href="comparing-tokenization-in-pygments-and-pandoc.html#cb6-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"The answer is </span><span class="sc">{}</span><span class="st">"</span>.<span class="bu">format</span>(result))</span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="comparing-tokenization-in-pygments-and-pandoc.html#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> typing <span class="im">import</span> Iterator</span>
+<span id="cb4-2"><a href="comparing-tokenization-in-pygments-and-pandoc.html#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="comparing-tokenization-in-pygments-and-pandoc.html#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co"># This is an example</span></span>
+<span id="cb4-4"><a href="comparing-tokenization-in-pygments-and-pandoc.html#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Math:</span>
+<span id="cb4-5"><a href="comparing-tokenization-in-pygments-and-pandoc.html#cb4-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">@staticmethod</span></span>
+<span id="cb4-6"><a href="comparing-tokenization-in-pygments-and-pandoc.html#cb4-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> fib(n: <span class="bu">int</span>) <span class="op">-&gt;</span> Iterator[<span class="bu">int</span>]:</span>
+<span id="cb4-7"><a href="comparing-tokenization-in-pygments-and-pandoc.html#cb4-7" aria-hidden="true" tabindex="-1"></a>        <span class="co">""" Fibonacci series up to n """</span></span>
+<span id="cb4-8"><a href="comparing-tokenization-in-pygments-and-pandoc.html#cb4-8" aria-hidden="true" tabindex="-1"></a>        a, b <span class="op">=</span> <span class="dv">0</span>, <span class="dv">1</span></span>
+<span id="cb4-9"><a href="comparing-tokenization-in-pygments-and-pandoc.html#cb4-9" aria-hidden="true" tabindex="-1"></a>        <span class="cf">while</span> a <span class="op">&lt;</span> n:</span>
+<span id="cb4-10"><a href="comparing-tokenization-in-pygments-and-pandoc.html#cb4-10" aria-hidden="true" tabindex="-1"></a>            <span class="cf">yield</span> a</span>
+<span id="cb4-11"><a href="comparing-tokenization-in-pygments-and-pandoc.html#cb4-11" aria-hidden="true" tabindex="-1"></a>            a, b <span class="op">=</span> b, a <span class="op">+</span> b</span>
+<span id="cb4-12"><a href="comparing-tokenization-in-pygments-and-pandoc.html#cb4-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-13"><a href="comparing-tokenization-in-pygments-and-pandoc.html#cb4-13" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> <span class="bu">sum</span>(Math.fib(<span class="dv">42</span>))</span>
+<span id="cb4-14"><a href="comparing-tokenization-in-pygments-and-pandoc.html#cb4-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"The answer is </span><span class="sc">{}</span><span class="st">"</span>.<span class="bu">format</span>(result))</span></code></pre></div>
 
 </div>
 </div>
@@ -209,14 +209,14 @@
 
 
   <div class="chapter-nav">
-<div class="prev"><a href="hello-plot-with-python.html"><span class="header-section-number">3</span> Hello Plot with Python</a></div>
+<div class="prev"><a href="hello-plot-with-python.html"><span class="header-section-number">2</span> Hello Plot with Python</a></div>
 <div class="empty"></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
       <ul class="nav navbar-nav">
-<li><a class="nav-link" href="#comparing-tokenization-in-pygments-and-pandoc"><span class="header-section-number">4</span> Comparing Tokenization in Pygments and Pandoc</a></li>
-<li><a class="nav-link" href="#how-the-code-gets-tokenized"><span class="header-section-number">4.1</span> How the Code Gets Tokenized</a></li>
-<li><a class="nav-link" href="#seeing-what-syntax-coloring-looks-like-with-a-default-snippet-from-pygments"><span class="header-section-number">4.2</span> Seeing what syntax-coloring looks like with a default snippet from Pygments</a></li>
+<li><a class="nav-link" href="#comparing-tokenization-in-pygments-and-pandoc"><span class="header-section-number">3</span> Comparing Tokenization in Pygments and Pandoc</a></li>
+<li><a class="nav-link" href="#how-the-code-gets-tokenized"><span class="header-section-number">3.1</span> How the Code Gets Tokenized</a></li>
+<li><a class="nav-link" href="#seeing-what-syntax-coloring-looks-like-with-a-default-snippet-from-pygments"><span class="header-section-number">3.2</span> Seeing what syntax-coloring looks like with a default snippet from Pygments</a></li>
 </ul>
 
       <div class="book-extra">
