@@ -1,7 +1,7 @@
 ---
 title: "ENES 197: The Fault in Our Data"
 author: "Brian A. Danielak"
-date: "2022-05-24"
+date: "2022-05-25"
 site: bookdown::bookdown_site
 documentclass: book
 url: "https://briandk.github.io/enes-197-the-fault-in-our-data"
