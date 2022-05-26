@@ -11,7 +11,8 @@ rmd_files: [
   "01-messiness-in-data.Rmd",
   "02-data-types.Rmd",
   "03-visualizing-data.Rmd",
-  "04-building-models.Rmd"
+  "04-building-models.Rmd",
+  "05-case-studies.Rmd",
 
   "course-learning-objectives.Rmd",
 ]

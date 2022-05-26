@@ -1,4 +1,4 @@
-# Hello Plot with Python
+# Visualizing Data with a Grammar of Graphics
 
 There's lots of stuff to do in Python; let's start with a plot!
 
