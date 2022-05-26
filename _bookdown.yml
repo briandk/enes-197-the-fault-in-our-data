@@ -7,8 +7,7 @@ language:
     chapter_name: "Chapter "
 rmd_files: [
   "index.Rmd",
-  "course-learning-objectives.Rmd",
+  "01-messiness-in-data.Rmd",
 
-  "hello-plot-with-python.Rmd",
-  "comparing-python-tokenization.Rmd"
+  "course-learning-objectives.Rmd",
 ]
