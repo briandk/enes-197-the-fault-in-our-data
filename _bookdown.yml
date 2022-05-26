@@ -10,7 +10,8 @@ rmd_files: [
 
   "01-messiness-in-data.Rmd",
   "02-data-types.Rmd",
-  "03-visualizing-data",
+  "03-visualizing-data.Rmd",
+  "04-building-models.Rmd"
 
   "course-learning-objectives.Rmd",
 ]
