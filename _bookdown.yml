@@ -7,8 +7,10 @@ language:
     chapter_name: "Chapter "
 rmd_files: [
   "index.Rmd",
+
   "01-messiness-in-data.Rmd",
   "02-data-types.Rmd",
+  "03-visualizing-data",
 
   "course-learning-objectives.Rmd",
 ]
