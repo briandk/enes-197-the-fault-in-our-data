@@ -1,3 +1,4 @@
+messiness-in-data
 course-learning-objectives
 manipulating-data
 understanding-a-grammar-of-graphics
@@ -12,10 +13,3 @@ understanding-data
 plotting
 sharingpublicizing-an-analysis-reproducible-researchopen-science
 learning-objectives-students-will-be-able-to-1
-hello-plot-with-python
-plotting-the-diamonds-dataset
-typesetting-math-with-latex-for-fun-and-profit
-we-can-also-run-r
-comparing-tokenization-in-pygments-and-pandoc
-how-the-code-gets-tokenized
-seeing-what-syntax-coloring-looks-like-with-a-default-snippet-from-pygments
