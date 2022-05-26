@@ -3,7 +3,7 @@ author: "Brian Danielak"
 date: "2022-05-20"
 ---
 
-# Course Learning Objectives
+# Course Learning Objectives {.unnumbered}
 
 ## Manipulating Data
 

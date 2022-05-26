@@ -1,5 +1,11 @@
 messiness-in-data
-course-learning-objectives
+data-types
+visualizing-data-with-a-grammar-of-graphics
+plotting-the-diamonds-dataset
+typesetting-math-with-latex-for-fun-and-profit
+we-can-also-run-r
+building-models
+case-studies
 manipulating-data
 understanding-a-grammar-of-graphics
 fitting-a-model-to-data
