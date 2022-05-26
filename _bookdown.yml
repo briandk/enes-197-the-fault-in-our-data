@@ -8,6 +8,7 @@ language:
 rmd_files: [
   "index.Rmd",
   "01-messiness-in-data.Rmd",
+  "02-data-types.Rmd",
 
   "course-learning-objectives.Rmd",
 ]
