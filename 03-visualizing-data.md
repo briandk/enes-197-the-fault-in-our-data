@@ -1,15 +1,27 @@
 # Visualizing Data with a Grammar of Graphics
 
+## Pre-Class Assignment
+
+1.  Pick a data-driven graphic.
+2.  How might the underlying data have been organized? (In other words, if you could access the underlying data for the plot, what do you think its columns might be? What datatypes would those columns be? What might constitute a row?)
+3.  What data parameters were mapped onto the graphic?
+4.  What visual mappings do you see? (For example, what data is being mapped to the x axis? The y-axis? Color? And so on...)
+5.  How would *you* have graphed this data? Would you make different choices? If so, what would they be? Explain why you would make those choices.
+
+------------------------------------------------------------------------
+
 There's lots of stuff to do in Python; let's start with a plot!
 
 ## Plotting the `diamonds` dataset
 
 Our first plot is going to make use of the `diamonds` dataset that ships with [`plotnine`](https://github.com/has2k1/plotnine).
 
-We'll import the necessary stuff from `plotnine` first. It seems like a lot of imports, but I made them all explicit so you can trace which parts of the code come from the `plotnine` library.
+We'll import the necessary stuff from `plotnine` first.
+It seems like a lot of imports, but I made them all explicit so you can trace which parts of the code come from the `plotnine` library.
 
 
 ```python
+
 from plotnine import aes
 from plotnine import facet_wrap
 from plotnine import ggtitle
@@ -44,7 +56,7 @@ plotnine.options.figure_size = (11, 8.5)
   + ggtitle('Diamond Prices by Carat')
 
 )
-#> <ggplot: (8726803150800)>
+#> <ggplot: (8735126622699)>
 #> 
 #> /opt/hostedtoolcache/Python/3.9.12/x64/lib/python3.9/site-packages/plotnine/utils.py:371: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
 ```
@@ -61,7 +73,8 @@ $$
 
 ## We can also run R
 
-Below, we'll generate a similar version of the plot we just made in Python, but we'll make this one in R. We'll need a few different packages to make it work.
+Below, we'll generate a similar version of the plot we just made in Python, but we'll make this one in R.
+We'll need a few different packages to make it work.
 
 As you look at the code anad the plot, ask yourself where you spot major differences from the Python version.
 
