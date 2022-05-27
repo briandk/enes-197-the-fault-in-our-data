@@ -1,1 +1,29 @@
 # Building Models
+
+## Pre-Class Assignment
+
+1.  Pick a data-driven model.
+2.  Posit the structure of the model.
+3.  What other parameters could or should have been incorporated into the model?
+
+## Example Model
+
+### Specify, Fit, Summarize
+
+```{python, cache = TRUE}
+import formulaic
+import statsmodels.api as sm
+
+import seaborn as sns
+
+diamonds = sns.load_dataset("diamonds")
+
+# Specify the model with a formula
+y, X = formulaic.model_matrix("price ~ carat", diamonds)
+
+# Fit the model
+regression = sm.OLS(y, X).fit()
+
+# Print the model summary
+regression.summary()
+```
