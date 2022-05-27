@@ -21,7 +21,6 @@ It seems like a lot of imports, but I made them all explicit so you can trace wh
 
 
 ```python
-
 from plotnine import aes
 from plotnine import facet_wrap
 from plotnine import ggtitle
@@ -56,7 +55,7 @@ plotnine.options.figure_size = (11, 8.5)
   + ggtitle('Diamond Prices by Carat')
 
 )
-#> <ggplot: (8735126622699)>
+#> <ggplot: (8748325280208)>
 #> 
 #> /opt/hostedtoolcache/Python/3.9.12/x64/lib/python3.9/site-packages/plotnine/utils.py:371: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
 ```
