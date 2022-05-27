@@ -63,20 +63,12 @@ plotnine.options.figure_size = (11, 8.5)
 
 <img src="03-visualizing-data_files/figure-html/unnamed-chunk-1-1.png" width="100%" />
 
-## Typesetting Math with $\LaTeX$ for fun and profit
-
-We can use $\LaTeX$ to show equations:
-
-$$
-\vec{F}_{net} = m\vec{a}
-$$
-
 ## We can also run R
 
 Below, we'll generate a similar version of the plot we just made in Python, but we'll make this one in R.
 We'll need a few different packages to make it work.
 
-As you look at the code anad the plot, ask yourself where you spot major differences from the Python version.
+As you look at the code and the plot, ask yourself where you spot major differences from the Python version.
 
 *Can you spot any differences?*
 

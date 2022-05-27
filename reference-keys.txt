@@ -5,9 +5,11 @@ pre-class-assignment-1
 visualizing-data-with-a-grammar-of-graphics
 pre-class-assignment-2
 plotting-the-diamonds-dataset
-typesetting-math-with-latex-for-fun-and-profit
 we-can-also-run-r
 building-models
+pre-class-assignment-3
+example-model
+specify-fit-summarize
 case-studies
 manipulating-data
 understanding-a-grammar-of-graphics
