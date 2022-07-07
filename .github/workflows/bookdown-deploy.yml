@@ -19,9 +19,8 @@ jobs:
 
       - name: Install Ubuntu Packages
         run: |
-          /usr/bin/sudo DEBIAN_FRONTEND=noninteractive \
-            apt-get update && \
-            apt-get install -y libcurl4-openssl-dev curl
+          /usr/bin/sudo DEBIAN_FRONTEND=noninteractive apt-get update && \
+          /usr/bin/sudo DEBIAN_FRONTEND=noninteractive apt-get install -y libcurl4-openssl-dev curl
 
       - name: Setup pandoc
         uses: r-lib/actions/setup-pandoc@v2
