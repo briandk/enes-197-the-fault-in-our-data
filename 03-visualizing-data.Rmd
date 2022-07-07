@@ -52,7 +52,6 @@ plotnine.options.figure_size = (11, 8.5)
   + xlab("Carat")
   + ylab("Price ($USD)")
   + ggtitle('Diamond Prices by Carat')
-
 )
 ```
 
