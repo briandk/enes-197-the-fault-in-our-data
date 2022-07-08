@@ -42,10 +42,10 @@ regression.summary()
   <th>Method:</th>             <td>Least Squares</td>  <th>  F-statistic:       </th>  <td>3.041e+05</td> 
 </tr>
 <tr>
-  <th>Date:</th>             <td>Fri, 27 May 2022</td> <th>  Prob (F-statistic):</th>   <td>  0.00</td>   
+  <th>Date:</th>             <td>Fri, 08 Jul 2022</td> <th>  Prob (F-statistic):</th>   <td>  0.00</td>   
 </tr>
 <tr>
-  <th>Time:</th>                 <td>00:53:50</td>     <th>  Log-Likelihood:    </th> <td>-4.7273e+05</td>
+  <th>Time:</th>                 <td>00:17:37</td>     <th>  Log-Likelihood:    </th> <td>-4.7273e+05</td>
 </tr>
 <tr>
   <th>No. Observations:</th>      <td> 53940</td>      <th>  AIC:               </th>  <td>9.455e+05</td> 

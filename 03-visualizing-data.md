@@ -53,11 +53,8 @@ plotnine.options.figure_size = (11, 8.5)
   + xlab("Carat")
   + ylab("Price ($USD)")
   + ggtitle('Diamond Prices by Carat')
-
 )
-#> <ggplot: (8748325280208)>
-#> 
-#> /opt/hostedtoolcache/Python/3.9.12/x64/lib/python3.9/site-packages/plotnine/utils.py:371: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
+#> <ggplot: (8740414110025)>
 ```
 
 <img src="03-visualizing-data_files/figure-html/unnamed-chunk-1-1.png" width="100%" />
